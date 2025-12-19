@@ -95,7 +95,8 @@
   },
   "logo": {
     "light": "/assets/logo.svg",
-    "dark": "/assets/logo.svg"
+    "dark": "/assets/logo.svg",
+    "href": "https://www.byui.edu"
   },
   "appearance": {
     "default": "light",
