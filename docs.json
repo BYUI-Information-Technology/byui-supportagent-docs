@@ -25,18 +25,19 @@
           {
             "group": "Basics of Artificial Intelligence",
             "pages": [
-              "learn/overview",
-              "learn/what-is-rag",
-              "learn/what-is-chunking",
-              "learn/hallucination-editorial"
+              "learn/basics/overview",
+              "learn/basics/what-is-rag",
+              "learn/basics/what-is-chunking",
+              "learn/basics/hallucination-editorial"
             ]
           },
           {
             "group": "Advanced Topics",
             "pages": [
-              "learn/why-markdown",
-              "learn/docs-as-code",
-              "learn/ai-native-knowledge-bases-research"
+              "learn/advanced/why-markdown",
+              "learn/advanced/docs-as-code",
+              "learn/advanced/llm-weaknesses",
+              "learn/advanced/ai-native-knowledge-bases-research"
             ]
           }
         ]
