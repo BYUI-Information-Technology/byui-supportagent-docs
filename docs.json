@@ -72,8 +72,8 @@
     ]
   },
   "logo": {
-    "light": "/assets/lightmode_logo.svg",
-    "dark": "/assets/darkmode_logo.svg",
+    "light": "/assets/lightmode_logo.png",
+    "dark": "/assets/darkmode_logo.png",
     "href": "https://www.byui.edu"
   },
   "appearance": {
