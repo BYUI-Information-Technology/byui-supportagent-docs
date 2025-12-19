@@ -1,9 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "mint",
   "name": "Support Agent Documentation",
   "colors": {
-    "primary": "#0ea5e9"
+    "primary": "#0ea5e9",
+    "light": "#0ea5e9",
+    "dark": "#0ea5e9"
   },
   "favicon": "/assets/favicon.svg",
   "navigation": {
