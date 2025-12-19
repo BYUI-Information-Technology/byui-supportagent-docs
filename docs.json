@@ -21,6 +21,17 @@
         ]
       },
       {
+        "tab": "Learn",
+        "groups": [
+          {
+            "group": "AI Basics",
+            "pages": [
+              "learn/index"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Technical",
         "groups": [
           {
