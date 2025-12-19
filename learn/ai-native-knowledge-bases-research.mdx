@@ -1,6 +1,6 @@
 ---
 title: AI-Native Knowledge Bases
-summary: Comprehensive research on why Markdown-native knowledge bases are optimal for AI/RAG systems, including industry case studies and strategic recommendations.
+description: Comprehensive research on why Markdown-native knowledge bases are optimal for AI/RAG systems, including industry case studies and strategic recommendations.
 tags: [ai, rag, knowledge-management, llms-txt, markdown, byui, strategy]
 status: published
 date: 2025-12-13
@@ -86,10 +86,10 @@ Traditional web content presents challenges for LLMs:
 
 ### File Variants
 
-| File | Purpose |
-|------|---------|
-| `llms.txt` | Index file with links and brief descriptions |
-| `llms-full.txt` | Complete documentation in a single file |
+| File                   | Purpose                                               |
+| ---------------------- | ----------------------------------------------------- |
+| `llms.txt`             | Index file with links and brief descriptions          |
+| `llms-full.txt`        | Complete documentation in a single file               |
 | Individual `.md` files | Detailed content accessible via URL (e.g., `page.md`) |
 
 ### Example Structure
@@ -97,15 +97,17 @@ Traditional web content presents challenges for LLMs:
 ```markdown
 # FastHTML
 
-> FastHTML is a python library which brings together Starlette, 
-> Uvicorn, HTMX, and fastcore's `FT` "FastTags" into a library 
+> FastHTML is a python library which brings together Starlette,
+> Uvicorn, HTMX, and fastcore's `FT` "FastTags" into a library
 > for creating server-rendered hypermedia applications.
 
 ## Important Notes
+
 - Not compatible with FastAPI syntax
 - Compatible with JS-native web components
 
 ## Documentation
+
 - [Getting Started](https://example.com/docs/getting-started.md)
 - [API Reference](https://example.com/docs/api-reference.md)
 - [Configuration Guide](https://example.com/docs/configuration.md)
@@ -203,11 +205,11 @@ Traditional web content presents challenges for LLMs:
 
 ### RAG Implementation Benefits
 
-| Metric | Improvement | Source |
-|--------|-------------|--------|
+| Metric                              | Improvement                         | Source                |
+| ----------------------------------- | ----------------------------------- | --------------------- |
 | Response accuracy (domain-specific) | **78% improvement** vs vanilla LLMs | Industry survey, 2024 |
-| Enterprise AI projects using RAG | **63%** in 2024 | Industry survey |
-| Hallucination reduction | **Up to 30%** over static LLMs | Multiple studies |
+| Enterprise AI projects using RAG    | **63%** in 2024                     | Industry survey       |
+| Hallucination reduction             | **Up to 30%** over static LLMs      | Multiple studies      |
 
 ### Sector-Specific Results
 
@@ -240,6 +242,7 @@ Traditional web content presents challenges for LLMs:
 ### The Cost of Fragmentation
 
 **Case study (IT Support Organization):**
+
 > "An IT support organization relied on a knowledge base filled with outdated Standard Operating Procedures (SOPs) and inconsistent troubleshooting guides. The content was fragmented across tools, with no clear metadata or ownership. As a result, their RAG pipeline frequently retrieved irrelevant or conflicting information, leading to hallucinations in generated responses."
 
 ---
@@ -248,11 +251,11 @@ Traditional web content presents challenges for LLMs:
 
 ### Key Players
 
-| Platform | Markdown Native | YAML Frontmatter | llms.txt Auto-Gen | WYSIWYG Editor | Git Sync | Best For |
-|----------|-----------------|------------------|-------------------|----------------|----------|----------|
-| **Mintlify** | ✅ | ✅ | ✅ | Limited | ✅ | Developer docs, API references |
-| **GitBook** | ✅ | ✅ | ✅ | ✅ | ✅ | Mixed technical/non-technical teams |
-| **Outline** | ✅ | Partial | ❌ | ✅ | ❌ | Internal wikis, team knowledge |
+| Platform     | Markdown Native | YAML Frontmatter | llms.txt Auto-Gen | WYSIWYG Editor | Git Sync | Best For                            |
+| ------------ | --------------- | ---------------- | ----------------- | -------------- | -------- | ----------------------------------- |
+| **Mintlify** | ✅              | ✅               | ✅                | Limited        | ✅       | Developer docs, API references      |
+| **GitBook**  | ✅              | ✅               | ✅                | ✅             | ✅       | Mixed technical/non-technical teams |
+| **Outline**  | ✅              | Partial          | ❌                | ✅             | ❌       | Internal wikis, team knowledge      |
 
 ### Mintlify Highlights
 
