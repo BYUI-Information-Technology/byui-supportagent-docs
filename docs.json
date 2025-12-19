@@ -1,0 +1,106 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Support Agent Documentation",
+  "colors": {
+    "primary": "#0ea5e9"
+  },
+  "favicon": "/assets/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Home",
+            "pages": [
+              "index",
+              "getting-started/chat-interface"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Technical",
+        "groups": [
+          {
+            "group": "Technical Documentation",
+            "pages": [
+              "technical/chat-widget",
+              "technical/infrastructure",
+              "technical/retrieval-augmentation",
+              "technical/specifications",
+              "technical/release-notes/september-release"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "groups": [
+          {
+            "group": "Resources",
+            "pages": [
+              "resources/about-byui",
+              "resources/beta-disclosure",
+              "resources/additional-resources"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Privacy Policy",
+          "href": "https://cesprivacy.org/ces-institutions-privacy-notice",
+          "icon": "shield-halved"
+        },
+        {
+          "anchor": "Legal",
+          "href": "https://www.byui.edu/legal/",
+          "icon": "legal"
+        },
+        {
+          "anchor": "Contact Support",
+          "href": "https://www.byui.edu/contact-us/",
+          "icon": "envelope"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/assets/favicon.svg",
+    "dark": "/assets/favicon.svg"
+  },
+  "appearance": {
+    "default": "light",
+    "strict": false
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/BYUI-Information-Technology/Support-Agent"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Support Agent",
+      "href": "https://supportagent.byui.edu"
+    }
+  },
+  "search": {
+    "prompt": "Search documentation..."
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/BYUI-Information-Technology/Support-Agent"
+    }
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  }
+}
