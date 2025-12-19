@@ -1,0 +1,287 @@
+/* Custom styles for BYUI Support Agent documentation */
+
+/* BYU-Idaho official brand colors */
+:root {
+  /* Primary Brand Colors */
+  --byui-brand-blue: #006eb6;
+  --byui-black: #000000;
+  --byui-white: #ffffff;
+  --byui-gray: #949598;
+
+  /* Accent Colors (use sparingly) */
+  --byui-dark-blue: #214491;
+  --byui-medium-blue: #4f9acf;
+  --byui-light-blue: #a0d4ed;
+
+  /* Legacy variables for backward compatibility */
+  --byui-blue: var(--byui-brand-blue);
+}
+
+/* Logo and branding adjustments */
+.md-header__button.md-logo img {
+  height: 2rem;
+  width: auto;
+}
+
+/* Custom button styling */
+.md-button.md-button--primary {
+  background-color: var(--byui-blue);
+  border-color: var(--byui-blue);
+  color: white;
+}
+
+.md-button.md-button--primary:hover {
+  background-color: var(--byui-dark-blue);
+  border-color: var(--byui-dark-blue);
+}
+
+.md-content__inner.md-typeset {
+  padding: 0;
+}
+
+/* Accent color for links and highlights */
+.md-typeset a {
+  color: var(--byui-blue);
+}
+
+.md-typeset > :first-child {
+  margin-top: 0;
+}
+.md-typeset > :last-child {
+  margin-bottom: 0;
+}
+
+.md-typeset a:hover {
+  color: var(--byui-dark-blue);
+}
+
+/* Tighten vertical spacing between headings and body content */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Reduce top margin for lists so they sit closer to preceding headings */
+.md-typeset ul,
+.md-typeset ol {
+  margin-top: 0.25rem;
+}
+
+/* Slightly reduce paragraph spacing */
+.md-typeset p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* shadcn theme uses Tailwind Typography (.prose). Apply the same tightening here */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.prose p {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 0.25rem !important;
+}
+
+/* Ensure immediate sibling spacing is tight (heading followed by list/paragraph) */
+.prose h1 + p,
+.prose h2 + p,
+.prose h3 + p,
+.prose h4 + p,
+.prose h5 + p,
+.prose h6 + p,
+.prose h1 + ul,
+.prose h2 + ul,
+.prose h3 + ul,
+.prose h4 + ul,
+.prose h5 + ul,
+.prose h6 + ul,
+.prose h1 + ol,
+.prose h2 + ol,
+.prose h3 + ol,
+.prose h4 + ol,
+.prose h5 + ol,
+.prose h6 + ol {
+  margin-top: 0.25rem !important;
+}
+
+/* Custom admonition styling */
+.md-typeset .admonition.tip {
+  border-left: 4px solid var(--byui-blue);
+}
+
+.md-typeset .admonition.tip > .admonition-title::before {
+  background-color: var(--byui-blue);
+}
+
+/* Code block enhancements */
+.md-typeset code {
+  background-color: var(--byui-light-blue);
+  color: var(--byui-dark-blue);
+}
+
+/* Table styling improvements */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--md-default-fg-color--lighter);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--byui-light-blue);
+  color: var(--byui-dark-blue);
+  font-weight: 600;
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* Custom badge styles */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+.badge-success {
+  color: white;
+  background-color: #28a745;
+}
+
+.badge-warning {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.badge-info {
+  color: white;
+  background-color: var(--byui-blue);
+}
+
+/* Footer customization */
+.md-footer {
+  background-color: var(--byui-black);
+}
+
+.md-footer-meta {
+  background-color: var(--byui-black);
+}
+
+/* Header customization for both light and dark themes */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--byui-brand-blue);
+  --md-accent-fg-color: var(--byui-medium-blue);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--byui-brand-blue);
+  --md-accent-fg-color: var(--byui-medium-blue);
+}
+
+/* Homepage hero section */
+.homepage-hero {
+  text-align: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, var(--byui-light-blue) 0%, white 100%);
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.homepage-hero h1 {
+  color: var(--byui-blue);
+  margin-bottom: 1rem;
+}
+
+.homepage-hero p {
+  font-size: 1.1em;
+  color: var(--byui-gray);
+  margin-bottom: 1.5rem;
+}
+
+/* Feature cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.5rem;
+  background: white;
+  transition: box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 51, 160, 0.1);
+}
+
+.feature-card h3 {
+  color: var(--byui-blue);
+  margin-bottom: 0.5rem;
+}
+
+/* Status indicators */
+.status-online {
+  color: #28a745;
+}
+
+.status-warning {
+  color: #ffc107;
+}
+
+.status-offline {
+  color: #dc3545;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .homepage-hero {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .feature-card {
+  background: var(--md-default-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .homepage-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 51, 160, 0.1) 0%,
+    var(--md-default-bg-color) 100%
+  );
+}

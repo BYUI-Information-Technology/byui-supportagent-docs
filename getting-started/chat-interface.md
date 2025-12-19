@@ -1,0 +1,72 @@
+---
+title: Chat Interface
+description: How to use the BYU-Idaho Support Agent chat interface.
+---
+
+**Welcome!** The BYUI Support Agent is your 24/7 AI-powered assistant for quick answers to campus support questions. This guide will walk you through every step of using the chat interface confidently.
+
+<br />
+
+---
+
+### Accessing the Support Agent
+
+- Visit [https://supportagent.byui.edu/](https://supportagent.byui.edu/){:target="\_blank"} in your web browser
+- Login with your Church username and password
+- You’ll land on the Support Agent home page, where you can start your support conversation.
+
+---
+
+### Starting a Conversation
+
+- **Greeting:** The agent greets you and displays a message such as: “Howdy! I’m the Support Agent. Ask me anything.”
+- **Message Input:** At the bottom of the chat panel, click into the textbox labeled “Type your message…”.
+- **Send Your Message:** Enter your question or support request (e.g., “How do I reset my BYUI password?”), then press **Enter** or click the send icon/button.
+
+---
+
+### Using Chat Features
+
+<br />
+
+| Feature           | How to Use                                                                                                                       |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **See Tools**     | Type `/` (forward slash) to display available agent tools.                                                                       |
+| **Toggle Theme**  | Look for the “Toggle Theme” button or icon to switch between light and dark modes, for a comfortable viewing experience.         |
+| **Copy Response** | When a response appears, click the “Copy” button to copy the full message to your clipboard for easy sharing or reference.       |
+| **Rate Response** | To provide feedback on the agent's answer, click the star button on the response you receive. This helps improve future support. |
+| **Clear Memory**  | Use the “Clear Memory” button to delete your conversation history during your chat and start fresh.                              |
+
+---
+
+### Best Practices for Getting Help
+
+- **Be Specific:** The more details you give, the better the answer (e.g., “I can’t log into my email” vs. “I forgot my BYUI email password”).
+- **Explore Follow-ups:** After the agent responds, you can ask for clarification or a related question without starting over.
+- **Escalating Issues:** For complex or account-sensitive issues (like forgotten security answers), the agent will suggest next steps—such as contacting the BYUI Support Center.
+
+---
+
+### Important Notices
+
+- **Beta Disclaimer:** The system is in Beta, so answers may not always be perfect. Always verify critical information if unsure.
+- **Data Privacy:** No personal data is stored between sessions. Use the “Clear Memory” button to delete your conversation history during your chat only.
+
+---
+
+### Troubleshooting and Tips
+
+- **No Response?** Ensure you have a stable internet connection and refresh the page if you experience issues.
+- **Getting Stuck:** Click the three dots in the top right corner of the chat interface and select "Clear Memory", then refresh the page.
+
+---
+
+## Issues or Feedback
+
+While the Support Agent can answer many questions, some situations may require human assistance. In such cases, please contact:
+
+**BYU-Idaho Support Center**
+
+- **Phone**: 208-496-1411 (Call, SMS, WhatsApp)
+- **Email**: [ask@byui.edu](mailto:ask@byui.edu)
+- **Website**: [www.byui.edu/contact-us/](https://www.byui.edu/contact-us/){:target="\_blank"}
