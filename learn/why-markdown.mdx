@@ -1,0 +1,75 @@
+---
+# Article Metadata
+Title: Why Markdown for Retrieval-Augmented Generation (RAG)
+Summary: Markdown is a best practice for Retrieval-Augmented Generation (RAG) because it is a simple, easy to use, and efficient format for storing and retrieving information.
+Keywords: Markdown, RAG, Retrieval-Augmented Generation, Formatting, Best Practices
+Department: Information Technology
+Date: 2025-10-14
+---
+
+Industry tooling treats Markdown as a first-class source for RAG. Our RAG system (built in n8n Enterprise) can split text content by headings into structured chunks; preserve header paths for better retrieval; Pinecone/Weaviate recommend header-aware chunking; Markdown also avoids noisy HTML/PDF extraction. Result: cleaner embeddings, deterministic chunking, easier citations, and Git-native governance.
+
+## What is Markdown?
+
+Markdown is a simple markup language that allows you to write content in a format that can be easily converted to HTML. It is a lightweight markup language that is easy to read and write. It is a great way to write content for the web. Modern AI models are proficient in using this syntax to format content. When used in conjunction with our RAG system, it allows for the most efficient and effective retrieval of information.
+
+## Why is Markdown a best practice for RAG?
+
+Markdown is a best practice for RAG because it is a simple, easy to use, and efficient format for storing and retrieving information. When content is written in Markdown:
+  
+1. **AI systems understand it natively.** Large language models were trained on millions of Markdown documents. It’s the format they parse best. Your content becomes more retrievable, more accurately quoted, more useful in AI-assisted search.  
+2. **Structure becomes explicit.** Headings aren’t just visual—they’re semantic. When you write `## Eligibility Requirements`, you’re telling every downstream system “this is a section about eligibility.” That clarity compounds.  
+3. **It travels well.** Markdown converts cleanly to HTML, PDF, Word, and web pages. Write once, publish anywhere. No reformatting headaches.  
+4. **It’s future-proof.** Markdown files are plain text. They’ll open in 50 years. They’re not locked to any vendor or software version.  
+5. **It reduces your cognitive load.** No fiddling with formatting toolbars. You focus on *what* you’re saying, not how it looks. The structure emerges from simple characters.  
+
+## What this unlocks in practice (BYU-Idaho context)
+
+- Deterministic chunking & citations: Author in .md with # H1 → ## H2 → ### H3. Our RAG system will use the one-to-many mode to emit a chunk per section and map sections naturally so the AI model can understand the context of the chunk.
+- Cleaner content: Feed the content (clean Markdown text) to embeddings; avoids noisy layout junk from HTML/PDF. See example below.
+
+### Example
+
+Clean Markdown content for the AI model:
+
+```markdown
+# How to Reset Your Password
+
+## Steps
+
+The steps to reset your password are as follows:
+
+1. Click the "Forgot Password" link on the login page.
+2. Enter your email address and click the "Reset Password" button.
+3. Enter your new password and click the "Save" button.
+4. Enter your new password and click the "Save" button.
+```
+
+Noisy HTML content for the AI model:
+
+```html
+<div class="main-content" style="color: #884472;">
+  <h1 style="color: #884472;">How to Reset Your Password</h1>
+  <p style="color: #884472;">
+    The steps to reset your password are as follows:
+  </p>
+  <div class="steps" style="color: #884472;">
+    <ol>
+      <li style="color: #884472;">
+        Click the "Forgot Password" link on the login page.
+      </li>
+      <li style="color: #884472;">
+        Enter your email address and click the "Reset Password" button.
+      </li>
+      <li style="color: #884472;">
+        Enter your new password and click the "Save" button.
+      </li>
+      <li style="color: #884472;">
+        Enter your new password and click the "Save" button.
+      </li>
+    </ol>
+  </div>
+</div>
+```
+
+- Tooling alignment: Our RAG system natively honor Markdown syntax/structure, so your knowledge base stays consistent from authoring to serving.

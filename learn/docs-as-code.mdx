@@ -1,0 +1,51 @@
+---
+title: Docs-as-Code Methodology Overview
+summary: Comprehensive guide to the docs-as-code workflow that applies software development practices to documentation creation and maintenance.
+tags: [documentation, version-control, automation, ci-cd, markdown, git, knowledge-management]
+status: published
+date: 2025-12-13
+department: Information Technology
+---
+
+**Docs-as-code** is a workflow that applies software development practices to documentation creation and maintenance. It treats docs like code by using tools such as version control systems, collaborative reviews, and automation.​
+
+## Core Principles
+
+Documentation lives in plain text files, often Markdown, stored in repositories like Git. Changes undergo pull requests for peer review, ensuring quality and accuracy before merging. [reddit+1](https://www.reddit.com/r/technicalwriting/comments/1c74f89/what_exactly_is_the_docsascode_process/)​
+
+## Key Workflow Steps
+
+- Write docs in IDEs with syntax highlighting.
+- Use version control for branching, committing, and tracking history.
+- Run automated tests for links, formatting, and consistency via CI/CD pipelines.
+- Deploy updates automatically alongside code changes. [apimatic+1](https://docs.apimatic.io/docs-as-code/documentation-as-code-overview/)​
+
+## Main Benefits
+
+This approach keeps docs synchronized with code, boosts team collaboration between developers and writers, and reduces outdated content through built-in checks. It scales well for large projects by minimizing manual publishing efforts. [gitbook+1](https://www.gitbook.com/blog/what-is-docs-as-code)
+
+## Example: Microsoft Learn
+
+Microsoft employs a Docs-as-code workflow for Microsoft Learn content. Documentation is managed in GitHub repositories using Markdown files, with contributions via pull requests and automated builds. [learn.microsoft](https://learn.microsoft.com/en-us/contribute/content/code-in-docs)​
+
+## Workflow Details
+
+Content authors use Visual Studio Code with the Learn Authoring Pack extension to insert code snippets via relative paths to repo files, supporting features like line ranges and named snippets. Changes trigger CI/CD pipelines for validation, including link checks and code execution where applicable. [learn.microsoft](https://learn.microsoft.com/en-us/contribute/content/code-in-docs)​
+
+## Key Practices
+
+- Inline code and blocks reference actual source files for synchronization.
+- Cross-repo references enable pulling snippets from related projects.
+- Publishing occurs through Open Publishing Services, automating deployment to learn.microsoft.com. [learn.microsoft](https://learn.microsoft.com/en-us/contribute/content/code-in-docs)​
+
+## Sources
+
+1. [https://learn.microsoft.com/en-us/contribute/content/code-in-docs](https://learn.microsoft.com/en-us/contribute/content/code-in-docs)
+2. [https://techcommunity.microsoft.com/blog/bff5f527-af54-4e01-be5c-609acdd7f285/building-an-ai-assistant-for-microsoft-learn-docs-mcp/4431611](https://techcommunity.microsoft.com/blog/bff5f527-af54-4e01-be5c-609acdd7f285/building-an-ai-assistant-for-microsoft-learn-docs-mcp/4431611)
+3. [https://learn.microsoft.com/en-us/answers/questions/1401494/generating-documentation-of-software-project-from](https://learn.microsoft.com/en-us/answers/questions/1401494/generating-documentation-of-software-project-from)
+4. [https://learn.microsoft.com/en-us/azure/developer/iac/](https://learn.microsoft.com/en-us/azure/developer/iac/)
+5. [https://learn.microsoft.com/en-us/training/modules/generate-documentation-using-github-copilot-tools/](https://learn.microsoft.com/en-us/training/modules/generate-documentation-using-github-copilot-tools/)​
+6. [https://www.writethedocs.org/guide/docs-as-code.html](https://www.writethedocs.org/guide/docs-as-code.html)
+7. [https://www.gitbook.com/blog/what-is-docs-as-code](https://www.gitbook.com/blog/what-is-docs-as-code)
+8. [https://docs.apimatic.io/docs-as-code/documentation-as-code-overview/](https://docs.apimatic.io/docs-as-code/documentation-as-code-overview/)
+9. [https://about.gitlab.com/blog/five-fast-facts-about-docs-as-code-at-gitlab/](https://about.gitlab.com/blog/five-fast-facts-about-docs-as-code-at-gitlab/)

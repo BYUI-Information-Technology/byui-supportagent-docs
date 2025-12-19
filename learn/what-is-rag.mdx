@@ -1,0 +1,113 @@
+---
+title: What is RAG (Retrieval Augmented Generation)?
+summary: An accessible explanation of Retrieval Augmented Generation (RAG) for BYU-Idaho staff involved in knowledge content creation and curation for AI systems.
+tags: [rag, ai, knowledge-management, definitions, retrieval, vector-database]
+status: published
+date: 2025-12-07
+department: Information Technology
+---
+
+## Overview
+
+**Retrieval Augmented Generation (RAG)** is a technique that enhances AI systems by giving them access to specific, trusted knowledge sources—like the documentation you create—so they can provide accurate, contextual answers to questions.
+
+Think of RAG as giving an AI assistant a well-organized reference library before answering questions, rather than relying solely on its general training.
+
+## Why RAG Matters at BYU-Idaho
+
+When you write documentation following our [knowledge management strategy](knowledge-management-strategy.md), you're not just creating content for people to read—you're building a knowledge foundation that AI agents can use to help students, staff, and faculty.
+
+RAG enables our AI systems to:
+
+- Answer questions using *your department's specific policies and procedures*
+- Provide accurate information about *BYU-Idaho systems and processes*
+- Reference *current, maintained documentation* rather than outdated information
+- Cite sources and show exactly where information came from
+
+## How RAG Works (Simplified)
+
+RAG has three main steps:
+
+### 1. Retrieval
+
+When someone asks a question, the AI system searches through the knowledge base to find the most relevant documentation. This search uses:
+
+- **Semantic understanding** - Finding documents by *meaning*, not just keyword matching
+- **Metadata filtering** - Using the front matter fields you provide (`tags`, `department`, `status`) to narrow results
+- **Recency signals** - Prioritizing up-to-date content based on your `last_updated` field
+
+### 2. Augmentation
+
+The AI system takes the relevant documentation it found and adds it as context to the user's question. Instead of answering from memory alone, it now has your curated knowledge to work with.
+
+### 3. Generation
+
+The AI generates a response using both its general capabilities *and* the specific knowledge you provided. This results in answers that are:
+
+- Grounded in official BYU-Idaho documentation
+- Accurate to your department's current processes
+- Traceable back to authoritative sources
+
+## The Role of Vector Storage
+
+To make semantic search possible, documentation is converted into mathematical representations called *vectors* (think of them as numerical "fingerprints" of meaning). These vectors are stored in BYU-Idaho's enterprise vector database: **Pinecone**.
+
+>[!NOTE]
+>BYU-Idaho uses **Pinecone** as our vector database platform. When your Markdown documents are ingested, they're automatically converted to vectors and stored in Pinecone, making them searchable by our AI agents.
+
+When someone asks a question, Pinecone quickly finds the documentation that's most semantically similar to their question—even if they use different words than you did in the documentation.
+
+## Your Role in the RAG Pipeline
+
+As a knowledge content creator, you're directly supporting RAG systems when you:
+
+1. **Write clear, comprehensive documentation** - The better your content, the better the AI's answers
+2. **Use the required front matter fields** - These help the AI find and filter your content appropriately
+3. **Include meaningful tags** - Tags improve retrieval accuracy for related topics
+4. **Keep `date` current** - Ensures the AI prioritizes fresh information
+5. **Set proper `status` values** - Prevents draft or outdated content from appearing in AI responses
+
+## Practical Example
+
+**Scenario:** A student asks the Support Agent, "How do I register for fall classes?"
+
+**Without RAG:** The AI answers based on general knowledge about college registration, which may be inaccurate or outdated.
+
+**With RAG:**
+
+1. The system searches Pinecone for documentation matching "fall class registration"
+2. It retrieves your well-maintained article on course registration procedures
+3. It uses your documentation to generate an accurate, BYU-Idaho-specific answer
+4. It cites your article as the source
+
+Your documentation *directly powered* that accurate response.
+
+## RAG vs. Traditional AI
+
+| Traditional AI (No RAG) | RAG-Enhanced AI |
+| ------------------------------------- | ------------------------------------------------- |
+| Answers from training data only | Answers from training data + your documentation |
+| May be outdated or generic | Current and institution-specific |
+| No source citations | Can cite specific documents |
+| Can't access new information | Updated whenever you update documentation |
+| Limited to what it was trained on | Extensible with your knowledge |
+
+## Key Takeaways
+
+- **RAG connects AI to real documentation** - Your content becomes the AI's reference library
+- **Front matter enables retrieval** - Those metadata fields help the AI find the right content
+- **BYU-Idaho uses Pinecone** - Our enterprise vector database that makes semantic search possible
+- **Your work directly impacts AI accuracy** - Well-curated content leads to trustworthy AI responses
+- **Think hybrid: human + AI readers** - Write for people, but structure for machines (via front matter)
+
+## Related Documentation
+
+- [[knowledge-management-strategy|Knowledge Management Strategy]] - How to structure documentation for RAG
+- [[General/Work/Artificial-Intelligence/ai-glossary|AI Glossary]] - More AI and machine learning terms
+
+## Questions?
+
+For questions about RAG, knowledge curation, or AI systems at BYU-Idaho, contact:
+
+**AI Engineering – BYU-Idaho**
+📧 <ai-engineering@byui.edu>

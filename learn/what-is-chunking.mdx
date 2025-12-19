@@ -1,0 +1,147 @@
+---
+title: What is Chunking in RAG Systems?
+summary: A simple explanation of document chunking and how proper Markdown structure enables intelligent content segmentation for AI retrieval systems.
+tags: [chunking, rag, markdown, langchain, knowledge-management, document-processing]
+status: published
+date: 2025-12-07
+department: Information Technology
+---
+
+## Overview
+
+**Chunking** is the process of breaking large documents into smaller, focused segments before storing them in a vector database. Instead of treating your entire 10-page document as one unit, chunking splits it into logical pieces that can be retrieved independently.
+
+Think of it like organizing a filing cabinet: rather than having one massive folder for "Student Services," you create separate folders for "Registration," "Financial Aid," "Academic Advising," etc. When someone needs information about registration, you hand them just that folder—not the entire cabinet.
+
+## Why Chunking Matters
+
+AI systems work better with focused, bite-sized content. Here's why:
+
+**Better Retrieval Accuracy**
+When someone asks a specific question, the AI can retrieve just the relevant section—not an entire document where the answer is buried on page 7.
+
+**Improved Context Quality**
+AI models have limits on how much text they can process at once. Smaller chunks mean more relevant information fits in that window.
+
+**Precise Citations**
+The AI can point users to specific sections of documentation rather than vague references to lengthy articles.
+
+## How BYU-Idaho Does Chunking
+
+BYU-Idaho uses **LangChain**, a framework that performs *intelligent chunking* based on your document's Markdown structure. This means LangChain doesn't just split text arbitrarily—it respects the logical organization you create.
+
+### Markdown Hierarchy Enables Smart Chunking
+
+When you structure documents with proper Markdown headings, LangChain can chunk by semantic meaning:
+
+```markdown
+## Course Registration Process
+
+Information about registration becomes one chunk.
+
+### Registration Deadlines
+
+Deadline information becomes a separate chunk.
+
+### How to Register Online
+
+Step-by-step instructions become another chunk.
+
+### Registration Holds
+
+Hold-related information is its own chunk.
+```
+
+Each section with a heading becomes an independent, searchable unit in Pinecone.
+
+[!TIP]
+Proper use of Markdown headings (`##`, `###`, `####`) directly improves how well AI can find and use your content. Good document structure = better chunking = more accurate AI responses.
+
+## Your Role: Writing Chunk-Friendly Documentation
+
+The knowledge management strategy we follow makes intelligent chunking possible. Here's how you support it:
+
+### 1. Use Clear, Hierarchical Headings
+
+Break content into logical sections with descriptive headings:
+
+**Good:**
+
+```markdown
+## Financial Aid Overview
+
+## Types of Financial Aid
+### Grants and Scholarships
+### Student Loans
+### Work-Study Programs
+
+## How to Apply for Financial Aid
+```
+
+**Avoid:**
+
+```markdown
+## Financial Aid
+
+[Long wall of text with no subheadings...]
+```
+
+### 2. Keep Sections Focused
+
+Each section should cover one topic or concept. If a section is getting too long (more than 3-4 paragraphs), consider breaking it into subsections.
+
+### 3. Write Self-Contained Sections
+
+Each chunk should make sense on its own. When the AI retrieves a single section, readers should understand the context without needing to read the entire document.
+
+**Example:**
+
+```markdown
+### Dropping a Course After the Add/Drop Deadline
+
+Students who need to drop a course after the add/drop deadline
+must submit a petition through the Registrar's Office. Late drops
+may result in a W (Withdrawal) grade appearing on the transcript.
+
+Contact the Registrar at registrar@byui.edu for the petition form.
+```
+
+This section stands alone and provides complete information.
+
+## How the Process Works
+
+1. **You write** structured Markdown documents with clear headings and focused sections
+2. **LangChain processes** your document, intelligently splitting it by Markdown hierarchy
+3. **Each chunk is vectorized** and stored in Pinecone with its heading as context
+4. **When queried**, the AI retrieves only the most relevant chunks—not entire documents
+5. **Users get precise answers** with citations to specific sections
+
+## Chunking Best Practices
+
+| Do This | Why It Helps |
+| ------------------------------------------------- | ------------------------------------------------- |
+| Use descriptive heading text | Headings become chunk titles in search results |
+| Keep sections focused (one topic per section) | Creates retrievable, targeted chunks |
+| Avoid long paragraphs without breaks | Makes content easier to chunk effectively |
+| Include context in each section | Chunks need to stand alone when retrieved |
+| Use consistent heading levels (`##`, `###`, etc.) | Maintains clear document hierarchy for LangChain |
+
+## Key Takeaways
+
+- **Chunking splits documents into focused, retrievable segments** for better AI performance
+- **BYU-Idaho uses LangChain** to chunk intelligently by Markdown structure
+- **Your heading hierarchy matters** - it directly determines how content is chunked
+- **Well-structured Markdown = better chunking** = more accurate AI responses
+- **Each section should stand alone** - think of headings as creating mini-documents
+
+## Related Documentation
+
+- [[what-is-rag|What is RAG?]] - Understanding how chunked content is retrieved
+- [[knowledge-management-strategy|Knowledge Management Strategy]] - Full documentation standards
+
+## Questions?
+
+For questions about document chunking, Markdown structure, or RAG systems at BYU-Idaho, contact:
+
+**AI Engineering – BYU-Idaho**
+<ai-engineering@byui.edu>
