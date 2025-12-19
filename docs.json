@@ -72,8 +72,8 @@
     ]
   },
   "logo": {
-    "light": "/assets/logo.svg",
-    "dark": "/assets/logo.svg",
+    "light": "/assets/lightmode_logo.svg",
+    "dark": "/assets/darkmode_logo.svg",
     "href": "https://www.byui.edu"
   },
   "appearance": {
@@ -83,7 +83,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Homepage",
+        "label": "Visit BYUI Home",
         "href": "https://www.byui.edu/"
       }
     ],
