@@ -1,16 +1,19 @@
-# Chat Widget
+---
+title: Chat Widget
+description: Learn how we've made the Support Agent accessible to users by deploying a chat widget.
+---
 
 We've created a chat widget that provides students, faculty, and staff quick access to the BYU-Idaho Support Agent. This guide describes how to use and customize the chat widget.
 
 ![Chat Widget Example Deployment](../assets/example-deployment.png)
 
-## How to Embed the Chat Widget
+## How We Embedded the Chat Widget
 
-Add this single line of code before the closing `</body>` tag on any webpage:
+Our web engineers simply added a single line of code before the closing `</body>` tag on our global site, which then propogates the widget to all child pages
 
-`<script src="https://byui-supportagent-dphsbtd5afaba6c3.a01.azurefd.net/support-widget/chat-widget.js"></script>`
+Example code:
 
-For an example deployment, see the [IT Help Center (Sandbox)](https://td.byui.edu/SBTDClient/79/ITHelpCenter/Home/) website.
+`<script src="https://cdn.somethinghere/support-widget/chat-widget.js"></script>`
 
 ## Security
 

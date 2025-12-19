@@ -23,16 +23,16 @@
         "tab": "Learn",
         "groups": [
           {
-            "group": "AI Basics",
+            "group": "Basics of Artificial Intelligence",
             "pages": [
-              "learn/index",
+              "learn/overview",
               "learn/what-is-rag",
               "learn/what-is-chunking",
               "learn/hallucination-editorial"
             ]
           },
           {
-            "group": "Documentation Best Practices",
+            "group": "Advanced Topics",
             "pages": [
               "learn/why-markdown",
               "learn/docs-as-code",
@@ -83,8 +83,8 @@
   "navbar": {
     "links": [
       {
-        "label": "GitHub",
-        "href": "https://github.com/BYUI-Information-Technology/Support-Agent"
+        "label": "Homepage",
+        "href": "https://www.byui.edu/"
       }
     ],
     "primary": {
@@ -98,7 +98,7 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/BYUI-Information-Technology/Support-Agent"
+      "github": "https://github.com/BYUI-Information-Technology/"
     }
   },
   "feedback": {

@@ -9,13 +9,15 @@ description: An accessible explanation of Retrieval Augmented Generation (RAG) f
 
 Think of RAG as giving an AI assistant a well-organized reference library before answering questions, rather than relying solely on its general training.
 
-## Why RAG Matters at BYU-Idaho
+## Who Invented RAG?
 
-When you write documentation following our [knowledge management strategy](knowledge-management-strategy.md), you're not just creating content for people to read—you're building a knowledge foundation that AI agents can use to help students, staff, and faculty.
+In 2020, Facebook (now Meta) invented a technique called [Retrieval Augmented Generation (RAG)](https://arxiv.org/abs/2005.11401) to improve the accuracy of AI models for domain-specific tasks like question answering for support agents. RAG works by augmenting the AI model's knowledge with external sources of information, such as a knowledge base or a database. This allows the AI model to answer questions with more accuracy and precision. Engineers at BYU-Idaho have employed this technique to enable the Support Agent to answer questions about BYU-Idaho. The image below illustrates how RAG works for the Support Agent.
+
+## Why RAG Matters at BYU-Idaho
 
 RAG enables our AI systems to:
 
-- Answer questions using _your department's specific policies and procedures_
+- Answer questions using _department's specific policies and procedures_
 - Provide accurate information about _BYU-Idaho systems and processes_
 - Reference _current, maintained documentation_ rather than outdated information
 - Cite sources and show exactly where information came from
@@ -26,10 +28,10 @@ RAG has three main steps:
 
 ### 1. Retrieval
 
-When someone asks a question, the AI system searches through the knowledge base to find the most relevant documentation. This search uses:
+When someone asks a question, the AI system, like the BYUI Support Agent, searches through the knowledge base to find the most relevant documentation. This search uses:
 
 - **Semantic understanding** - Finding documents by _meaning_, not just keyword matching
-- **Metadata filtering** - Using the front matter fields you provide (`tags`, `department`, `status`) to narrow results
+- **Metadata filtering** - Using the fields you provide (`tags`, `department`, `status`) to narrow results
 - **Recency signals** - Prioritizing up-to-date content based on your `last_updated` field
 
 ### 2. Augmentation
@@ -53,16 +55,6 @@ To make semantic search possible, documentation is converted into mathematical r
 
 When someone asks a question, Pinecone quickly finds the documentation that's most semantically similar to their question—even if they use different words than you did in the documentation.
 
-## Your Role in the RAG Pipeline
-
-As a knowledge content creator, you're directly supporting RAG systems when you:
-
-1. **Write clear, comprehensive documentation** - The better your content, the better the AI's answers
-2. **Use the required front matter fields** - These help the AI find and filter your content appropriately
-3. **Include meaningful tags** - Tags improve retrieval accuracy for related topics
-4. **Keep `date` current** - Ensures the AI prioritizes fresh information
-5. **Set proper `status` values** - Prevents draft or outdated content from appearing in AI responses
-
 ## Practical Example
 
 **Scenario:** A student asks the Support Agent, "How do I register for fall classes?"
@@ -71,30 +63,28 @@ As a knowledge content creator, you're directly supporting RAG systems when you:
 
 **With RAG:**
 
-1. The system searches Pinecone for documentation matching "fall class registration"
-2. It retrieves your well-maintained article on course registration procedures
-3. It uses your documentation to generate an accurate, BYU-Idaho-specific answer
-4. It cites your article as the source
+1. The system searches Pinecone for documentation matching "fall class registration 2025"
+2. It retrieves knowledge base articles which are ranked and score by confidence levels (example: 90%)
+3. It uses just those articles to generate an accurate, BYU-Idaho-specific answer
+4. It provides the source information for the articles
 
-Your documentation _directly powered_ that accurate response.
+The knowledge base _directly powers_ the LLM responses.
 
 ## RAG vs. Traditional AI
 
-| Traditional AI (No RAG)           | RAG-Enhanced AI                                 |
-| --------------------------------- | ----------------------------------------------- |
-| Answers from training data only   | Answers from training data + your documentation |
-| May be outdated or generic        | Current and institution-specific                |
-| No source citations               | Can cite specific documents                     |
-| Can't access new information      | Updated whenever you update documentation       |
-| Limited to what it was trained on | Extensible with your knowledge                  |
+| Traditional AI (No RAG)           | RAG-Enhanced AI                                                |
+| --------------------------------- | -------------------------------------------------------------- |
+| Answers from training data only   | Answers from training data + knowledge base                    |
+| May be outdated or generic        | Current and institution-specific                               |
+| No source citations               | Can cite specific documents                                    |
+| Can't access new information      | Updated whenever vector database is synced with knowledge base |
+| Limited to what it was trained on | Extensible with the content in the knowledge base              |
 
 ## Key Takeaways
 
-- **RAG connects AI to real documentation** - Your content becomes the AI's reference library
-- **Front matter enables retrieval** - Those metadata fields help the AI find the right content
+- **RAG connects AI to real documentation** - The knowledge base becomes the AI's "knowledge"
 - **BYU-Idaho uses Pinecone** - Our enterprise vector database that makes semantic search possible
-- **Your work directly impacts AI accuracy** - Well-curated content leads to trustworthy AI responses
-- **Think hybrid: human + AI readers** - Write for people, but structure for machines (via front matter)
+- **Knowledge base quality impacts AI accuracy** - Well-curated content leads to trustworthy AI responses and reduced hallucination
 
 ## Related Documentation
 
