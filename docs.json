@@ -3,7 +3,9 @@
   "theme": "mint",
   "name": "Support Agent Documentation",
   "colors": {
-    "primary": "#006EB6"
+    "primary": "#006EB6",
+    "light": "#006EB6",
+    "dark": "#006EB6"
   },
   "favicon": "/assets/favicon.svg",
   "navigation": {
