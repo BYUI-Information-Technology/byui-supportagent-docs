@@ -27,8 +27,7 @@
             "pages": [
               "learn/basics/overview",
               "learn/basics/what-is-rag",
-              "learn/basics/what-is-chunking",
-              "learn/basics/hallucination-editorial"
+              "learn/basics/what-is-chunking"
             ]
           },
           {
