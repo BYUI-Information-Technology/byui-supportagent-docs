@@ -11,14 +11,11 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Getting Started",
         "groups": [
           {
-            "group": "Home",
-            "pages": [
-              "index",
-              "getting-started/chat-interface"
-            ]
+            "group": "Getting Started",
+            "pages": ["getting-started/quickstart", "getting-started/overview"]
           }
         ]
       },
@@ -73,26 +70,6 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Privacy Policy",
-          "href": "https://cesprivacy.org/ces-institutions-privacy-notice",
-          "icon": "shield-halved"
-        },
-        {
-          "anchor": "Legal",
-          "href": "https://www.byui.edu/legal/",
-          "icon": "legal"
-        },
-        {
-          "anchor": "Contact Support",
-          "href": "https://www.byui.edu/contact-us/",
-          "icon": "envelope"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/assets/logo.svg",
     "dark": "/assets/logo.svg",
@@ -129,12 +106,6 @@
     "raiseIssue": true
   },
   "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity"
-    ]
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity"]
   }
 }
