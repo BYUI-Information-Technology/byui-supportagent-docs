@@ -69,7 +69,8 @@
           }
         ]
       }
-    ],
+    ]
+  },
   "logo": {
     "light": "/assets/logo.svg",
     "dark": "/assets/logo.svg",
