@@ -94,8 +94,8 @@
     }
   },
   "logo": {
-    "light": "/assets/favicon.svg",
-    "dark": "/assets/favicon.svg"
+    "light": "/assets/logo.svg",
+    "dark": "/assets/logo.svg"
   },
   "appearance": {
     "default": "light",
