@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "willow",
   "name": "Support Agent Documentation",
   "colors": {
     "primary": "#0ea5e9"
