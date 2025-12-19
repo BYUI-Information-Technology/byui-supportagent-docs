@@ -15,9 +15,9 @@ When you write documentation following our [knowledge management strategy](knowl
 
 RAG enables our AI systems to:
 
-- Answer questions using *your department's specific policies and procedures*
-- Provide accurate information about *BYU-Idaho systems and processes*
-- Reference *current, maintained documentation* rather than outdated information
+- Answer questions using _your department's specific policies and procedures_
+- Provide accurate information about _BYU-Idaho systems and processes_
+- Reference _current, maintained documentation_ rather than outdated information
 - Cite sources and show exactly where information came from
 
 ## How RAG Works (Simplified)
@@ -28,7 +28,7 @@ RAG has three main steps:
 
 When someone asks a question, the AI system searches through the knowledge base to find the most relevant documentation. This search uses:
 
-- **Semantic understanding** - Finding documents by *meaning*, not just keyword matching
+- **Semantic understanding** - Finding documents by _meaning_, not just keyword matching
 - **Metadata filtering** - Using the front matter fields you provide (`tags`, `department`, `status`) to narrow results
 - **Recency signals** - Prioritizing up-to-date content based on your `last_updated` field
 
@@ -38,7 +38,7 @@ The AI system takes the relevant documentation it found and adds it as context t
 
 ### 3. Generation
 
-The AI generates a response using both its general capabilities *and* the specific knowledge you provided. This results in answers that are:
+The AI generates a response using both its general capabilities _and_ the specific knowledge you provided. This results in answers that are:
 
 - Grounded in official BYU-Idaho documentation
 - Accurate to your department's current processes
@@ -46,10 +46,10 @@ The AI generates a response using both its general capabilities *and* the specif
 
 ## The Role of Vector Storage
 
-To make semantic search possible, documentation is converted into mathematical representations called *vectors* (think of them as numerical "fingerprints" of meaning). These vectors are stored in BYU-Idaho's enterprise vector database: **Pinecone**.
+To make semantic search possible, documentation is converted into mathematical representations called _vectors_ (think of them as numerical "fingerprints" of meaning). These vectors are stored in BYU-Idaho's enterprise vector database: **Pinecone**.
 
->[!NOTE]
->BYU-Idaho uses **Pinecone** as our vector database platform. When your Markdown documents are ingested, they're automatically converted to vectors and stored in Pinecone, making them searchable by our AI agents.
+> [!NOTE]
+> BYU-Idaho uses **Pinecone** as our vector database platform. When your Markdown documents are ingested, they're automatically converted to vectors and stored in Pinecone, making them searchable by our AI agents.
 
 When someone asks a question, Pinecone quickly finds the documentation that's most semantically similar to their question—even if they use different words than you did in the documentation.
 
@@ -76,17 +76,17 @@ As a knowledge content creator, you're directly supporting RAG systems when you:
 3. It uses your documentation to generate an accurate, BYU-Idaho-specific answer
 4. It cites your article as the source
 
-Your documentation *directly powered* that accurate response.
+Your documentation _directly powered_ that accurate response.
 
 ## RAG vs. Traditional AI
 
-| Traditional AI (No RAG) | RAG-Enhanced AI |
-| ------------------------------------- | ------------------------------------------------- |
-| Answers from training data only | Answers from training data + your documentation |
-| May be outdated or generic | Current and institution-specific |
-| No source citations | Can cite specific documents |
-| Can't access new information | Updated whenever you update documentation |
-| Limited to what it was trained on | Extensible with your knowledge |
+| Traditional AI (No RAG)           | RAG-Enhanced AI                                 |
+| --------------------------------- | ----------------------------------------------- |
+| Answers from training data only   | Answers from training data + your documentation |
+| May be outdated or generic        | Current and institution-specific                |
+| No source citations               | Can cite specific documents                     |
+| Can't access new information      | Updated whenever you update documentation       |
+| Limited to what it was trained on | Extensible with your knowledge                  |
 
 ## Key Takeaways
 
@@ -100,10 +100,3 @@ Your documentation *directly powered* that accurate response.
 
 - [[knowledge-management-strategy|Knowledge Management Strategy]] - How to structure documentation for RAG
 - [[General/Work/Artificial-Intelligence/ai-glossary|AI Glossary]] - More AI and machine learning terms
-
-## Questions?
-
-For questions about RAG, knowledge curation, or AI systems at BYU-Idaho, contact:
-
-**AI Engineering – BYU-Idaho**
-📧 [ai-engineering@byui.edu](mailto:ai-engineering@byui.edu)
