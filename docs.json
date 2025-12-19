@@ -28,7 +28,18 @@
           {
             "group": "AI Basics",
             "pages": [
-              "learn/index"
+              "learn/index",
+              "learn/what-is-rag",
+              "learn/what-is-chunking",
+              "learn/hallucination-editorial"
+            ]
+          },
+          {
+            "group": "Documentation Best Practices",
+            "pages": [
+              "learn/why-markdown",
+              "learn/docs-as-code",
+              "learn/ai-native-knowledge-bases-research"
             ]
           }
         ]
