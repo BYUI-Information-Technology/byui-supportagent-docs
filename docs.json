@@ -33,12 +33,14 @@
               "learn/basics/overview",
               "learn/basics/how-llms-are-trained",
               "learn/basics/what-is-model-alignment",
-              "learn/basics/what-is-context-window"
+              "learn/basics/what-is-context-window",
+              "learn/basics/hallucinations-101"
             ]
           },
           {
             "group": "Advanced Topics",
             "pages": [
+              "learn/advanced/overview",
               "learn/advanced/docs-as-code",
               "learn/advanced/llm-weaknesses",
               "learn/advanced/ai-native-knowledge-bases-research"
@@ -47,6 +49,7 @@
           {
             "group": "Retrieval Augmentation",
             "pages": [
+              "learn/rag/overview",
               "learn/rag/what-is-rag",
               "learn/rag/what-is-chunking",
               "learn/rag/vector-databases"

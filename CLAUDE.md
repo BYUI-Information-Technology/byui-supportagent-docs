@@ -4,9 +4,113 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Mintlify-based documentation site** for the BYU-Idaho Support Agent platform. The documentation covers user guides, AI/RAG learning materials, technical specifications, and resource information. It uses MDX files for content and is deployed automatically through Mintlify's hosting platform.
+This is a **Mintlify-based documentation site** for the BYU-Idaho Support Agent platform. The primary audience for this documentation site are the students, faculty, staff, and administrators at Brigham Young University-Idaho. The documentation covers user guides, AI/RAG learning materials, technical specifications, and resource information. It uses MDX files for content and is deployed automatically through Mintlify's hosting platform.
 
-The Support Agent itself is a separate application (React + TypeScript frontend, Python + FastAPI backend) using the OpenAI Agents SDK, deployed on Azure Container Apps. This repository contains ONLY the documentation.
+The Support Agent itself is a separate application (React + TypeScript frontend, Python + FastAPI backend) using the OpenAI Agents SDK, deployed on Azure Container Apps (available at [supportagent.byui.edu](https://supportagent.byui.edu/)). This repository contains ONLY the documentation.
+
+## Content Overview
+
+The documentation is organized into five main navigation sections, each serving a distinct purpose and audience:
+
+### 1. Getting Started (`getting-started/`)
+
+**Purpose:** First-time user onboarding and platform introduction.
+
+**Current Content:** Quick start guides, platform overview, multi-agent architecture explanation, access instructions, and what makes the Support Agent special.
+
+**Target Audience:** New users (students, faculty, staff) encountering the Support Agent for the first time.
+
+**Vision:** Minimize time-to-value by helping users understand what the Support Agent is, how to access it, and how to get the most out of it. Content should answer: "What is this?", "Why should I use it?", and "How do I get started?"
+
+**Content Types:** Overviews, quick start guides, feature highlights, FAQs for new users.
+
+### 2. Learn
+
+Educational content helping users understand AI concepts, technology, and best practices. Organized by complexity and topic.
+
+#### 2a. Basics of Artificial Intelligence (`learn/basics/`)
+
+**Purpose:** Foundational AI concepts for complete beginners.
+
+**Current Content:** How LLMs are trained, model alignment, context windows, hallucinations, basic AI terminology.
+
+**Target Audience:** Students and users with little to no AI background who want to understand how the technology works.
+
+**Vision:** Demystify AI technology through accessible, jargon-free explanations. Build foundational knowledge that helps users become more effective AI users. Each article should answer one fundamental question about how AI works, using university-relevant examples. Topics should be self-contained but cross-reference related concepts.
+
+**Future Topics:** Prompt engineering basics, tokens and tokenization, temperature and randomness, AI safety and ethics, understanding AI limitations, how AI "thinks" vs. human thinking.
+
+#### 2b. Advanced Topics (`learn/advanced/`)
+
+**Purpose:** Complex AI concepts for users with foundational knowledge.
+
+**Current Content:** Docs-as-code methodology, LLM weaknesses and vulnerabilities, advanced patterns.
+
+**Target Audience:** Technical users, developers, IT staff, and curious students who want deeper understanding.
+
+**Vision:** Provide nuanced, technical explanations of AI system design, limitations, and advanced use cases. Content should help users understand not just how things work, but why design decisions were made and what tradeoffs exist. Suitable for those making technology decisions or building AI-integrated systems.
+
+**Future Topics:** Vector embeddings deep dive, semantic search architecture, AI system observability and monitoring, multi-agent orchestration patterns, prompt injection and security, fine-tuning vs. RAG tradeoffs, production AI system design.
+
+#### 2c. Retrieval Augmentation (`learn/rag/`)
+
+**Purpose:** Deep dive into RAG (Retrieval-Augmented Generation) technology powering the Support Agent.
+
+**Current Content:** What is RAG, chunking strategies, how RAG improves accuracy.
+
+**Target Audience:** Users curious about how the Support Agent retrieves accurate information, developers building similar systems.
+
+**Vision:** Make RAG technology understandable and demystify how the Support Agent stays accurate. Help readers understand why RAG is effective at reducing hallucinations and how it differs from base LLMs. Content should connect technical concepts to user-facing benefits.
+
+**Future Topics:** Vector databases explained, embedding models, semantic vs. keyword search, chunk size optimization, retrieval strategies (dense, sparse, hybrid), re-ranking techniques, knowledge base management, RAG evaluation metrics.
+
+#### 2d. Tips & Tricks (`learn/tips-tricks/`)
+
+**Purpose:** Practical advice for getting better results from AI systems.
+
+**Current Content:** To be developed - prompt engineering techniques, effective questioning strategies, troubleshooting common issues.
+
+**Target Audience:** All users who want to improve their AI interaction skills.
+
+**Vision:** Actionable, practical guidance that immediately improves user experience. Think "cookbook" style: specific problems with specific solutions. Focus on patterns users encounter daily with the Support Agent and how to handle them effectively.
+
+**Future Topics:** Writing better prompts, asking follow-up questions, when to escalate to humans, handling ambiguous responses, verifying AI answers, using the Support Agent for research, best practices by use case (registration help, policy questions, technical support).
+
+### 3. Technical (`technical/`)
+
+**Purpose:** Technical specifications, architecture documentation, and system details.
+
+**Current Content:** Infrastructure overview, system architecture, technology stack details, API documentation (if applicable).
+
+**Target Audience:** Developers, IT staff, technical stakeholders, governance teams, and integration partners.
+
+**Vision:** Provide complete technical transparency for those who need to understand how the system works, integrate with it, audit it, or maintain it. Should answer questions from IT professionals, developers, and technical decision-makers.
+
+**Future Topics:** API documentation, webhook integrations, system architecture diagrams, data flow documentation, security and compliance details, disaster recovery, performance metrics, scalability documentation.
+
+### 4. Release Notes (`technical/release-notes/`)
+
+**Purpose:** Version history and changelog tracking.
+
+**Current Content:** Chronological release documentation with version numbers, dates, features, improvements, bug fixes.
+
+**Target Audience:** All users who want to know what's new, IT staff tracking changes, governance teams monitoring updates.
+
+**Vision:** Transparent communication about platform evolution. Each release should clearly communicate what changed, why it matters, and any action users need to take. Follow semantic versioning and maintain clear, scannable format.
+
+**Format:** Follow `templates/release-template.mdx` structure. Include version number, release date, categories (Features, Improvements, Bug Fixes, Breaking Changes if applicable), and link to relevant documentation for new features.
+
+### 5. Resources (`resources/`)
+
+**Purpose:** Supplementary information, institutional context, and additional support materials.
+
+**Current Content:** BYU-Idaho specific information, beta program disclosure, contact information, external resources.
+
+**Target Audience:** All users seeking additional context, legal information, or alternative support channels.
+
+**Vision:** Provide institutional context, legal disclosures, contact information, and resources that don't fit other categories. Include information about BYU-Idaho, the AI initiative, governance, privacy policies, and how to get help beyond the Support Agent.
+
+**Future Topics:** AI governance at BYU-Idaho, privacy and data policies, accessibility information, training resources, feedback channels, roadmap and future plans, research and publications, case studies.
 
 ## Development Commands
 
@@ -127,6 +231,129 @@ Edit `docs.json` and add page reference under the appropriate tab and group:
 ### Editing Release Notes
 
 Release notes follow a specific structure defined in `templates/release-template.mdx` and are stored in `technical/release-notes/`. Include version, date, features, improvements, and fixes.
+
+## Content Creation Workflow
+
+### Research-Based Content Creation
+
+When creating content that requires research or exploration of complex topics, follow this two-stage workflow:
+
+#### Stage 1: Research
+
+Use the **Explore** or **general-purpose** subagent to gather information, understand the topic, and collect relevant details.
+
+**When to use research workflow:**
+- Creating content about new or unfamiliar topics
+- Exploring technical concepts that require investigation
+- Gathering examples, use cases, or best practices
+- Understanding how existing systems or technologies work
+- Finding relevant sources and references
+
+**How to invoke:**
+
+```txt
+Task(
+  subagent_type='Explore',  // or 'general-purpose' for complex research
+  description='Research vector embeddings',
+  prompt='Research vector embeddings and how they work in RAG systems.
+         Focus on: what they are, how they're generated, why they're useful for semantic search,
+         and how they're used in the Support Agent. Gather technical details but also
+         beginner-friendly explanations. Find relevant examples and analogies.'
+)
+```
+
+#### Stage 2: Writing
+
+After research is complete, use the **writing-agent** to create the article based on the research findings.
+
+**Critical Requirements:**
+1. **Audience-Appropriate Content** - Tailor complexity to the target section:
+   - `learn/basics/` - Beginner level, jargon-free, foundational concepts
+   - `learn/advanced/` - Technical depth, assumes AI knowledge
+   - `learn/rag/` - Moderate technical level, focused on RAG concepts
+   - `learn/tips-tricks/` - Practical, actionable, all skill levels
+   - `technical/` - Technical audience, developers and IT staff
+
+2. **BYU-Idaho Context** - Always frame content for BYU-Idaho students and employees:
+   - Use university-relevant examples (registration, campus systems, student scenarios)
+   - Reference the Support Agent where applicable
+   - Connect concepts to how they impact the BYU-Idaho experience
+   - Maintain institutional voice and values
+
+**How to invoke:**
+
+```txt
+Task(
+  subagent_type='writing-agent',
+  description='Write vector embeddings article',
+  prompt='Based on the research about vector embeddings, create a comprehensive article
+         for learn/basics/ directory.
+
+         RESEARCH CONTEXT: [Paste or reference key findings from research stage]
+
+         TARGET AUDIENCE: Complete beginners (learn/basics/) - BYU-Idaho students with
+         no AI background who want to understand how the Support Agent works.
+
+         REQUIREMENTS:
+         - Explain vector embeddings in beginner-friendly language
+         - Use university-relevant analogies (library search, student records, etc.)
+         - Connect to how the Support Agent uses embeddings
+         - Include link to related RAG article
+         - Follow standard-article.mdx template
+         - Include required frontmatter
+
+         TONE: Educational, accessible, professional - appropriate for BYU-Idaho documentation.'
+)
+```
+
+#### Example Research-to-Writing Workflow
+
+**User Request:** "Create an article about prompt engineering for the Tips & Tricks section"
+
+**Step 1 - Research:**
+```txt
+Task(
+  subagent_type='general-purpose',
+  description='Research prompt engineering techniques',
+  prompt='Research prompt engineering best practices, common techniques, and strategies
+         for getting better AI responses. Focus on practical techniques students can use
+         with the Support Agent. Gather examples of good vs. bad prompts.'
+)
+```
+
+**Step 2 - Writing:**
+```txt
+Task(
+  subagent_type='writing-agent',
+  description='Write prompt engineering guide',
+  prompt='Create a practical prompt engineering guide for learn/tips-tricks/ directory.
+
+         RESEARCH FINDINGS: [Include key research findings about prompt engineering]
+
+         TARGET AUDIENCE: All skill levels (tips-tricks section) - BYU-Idaho students
+         and employees who want to get better results from the Support Agent.
+
+         FOCUS: "Cookbook style" - specific problems with specific solutions
+         - How to write clear, specific questions
+         - Adding context to prompts
+         - Breaking complex questions into parts
+         - Examples using BYU-Idaho scenarios (registration, financial aid, etc.)
+
+         Include before/after examples showing weak prompts improved to strong prompts.
+         Reference the Support Agent throughout.
+         Follow standard-article.mdx template.'
+)
+```
+
+### Single-Stage Writing (No Research Required)
+
+For straightforward content where research isn't needed, proceed directly to the writing-agent.
+
+**When to skip research:**
+- Editing or improving existing content
+- Writing about well-understood topics
+- Creating content based on user-provided information
+- Drafting release notes or documentation updates
 
 ## Using the Writing Agent
 
