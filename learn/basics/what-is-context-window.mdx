@@ -1,0 +1,143 @@
+---
+title: What is a Context Window?
+description: Learn how AI systems remember conversations, why they sometimes forget, and how to work effectively within their working memory limits.
+---
+
+Imagine you're helping a friend study for a final exam. Your desk is covered with textbooks, notes, and handouts—everything you need to answer their questions. But here's the problem: your desk isn't infinite. As your study session continues and you pull out more materials, you eventually run out of space. To look at a new chapter, you have to put something else aside. Maybe you slide that earlier set of notes onto the floor, or you stack some handouts in a pile you can't see anymore. The materials aren't gone—they're still in the room—but they're no longer part of your active workspace. You can't reference them, quote from them, or even remember exactly what they said. Your working memory is constrained by the physical limits of your desk.
+
+This is exactly how AI systems like ChatGPT, Claude, and the BYU-Idaho Support Agent handle conversations. They have a context window—a working memory that holds everything the AI can "see" at any given moment. This includes your current question, everything you've said earlier in the conversation, all of the AI's previous responses, and any documents or information retrieved to help answer you. The context window is the AI's desk, and just like your study desk, it has limits. When a conversation gets long enough, the oldest parts start sliding off the edge. The AI doesn't just forget them—they literally disappear from its view, as if those earlier messages never existed. Understanding this limitation isn't about lowering your expectations. It's about learning to work effectively with a powerful tool that has particular constraints, much like understanding that your laptop battery eventually runs out or that your phone's storage has limits.
+
+## Understanding Tokens and Measurements
+
+The context window is measured in tokens, which are the basic units AI systems use to process language. Think of a token as roughly three-quarters of a word, though the exact conversion varies. Common words like "the" or "and" are single tokens, while longer or less common words might be broken into multiple pieces—"understanding" might become "under" and "standing" as two separate tokens. Punctuation counts too. A simple sentence like "Hello, how are you?" contains six tokens. What matters for you is the rough conversion: about 750 words equals approximately 1,000 tokens, and a typical single-spaced page of text contains somewhere between 650 and 750 tokens. These measurements let us translate the abstract notion of token limits into something more tangible.
+
+## The Support Agent's Context Window
+
+The BYU-Idaho Support Agent uses GPT-5.2, which has a 400,000-token context window. That sounds enormous, and in many ways it is—we're talking about roughly 300,000 words, or approximately 600 pages of text. That's the length of several full-length novels or the entire BYU-Idaho Student Handbook multiple times over. By comparison, the ChatGPT interface you might use in your browser has a 32,000-token limit—about 48 pages. The underlying GPT-4o model supports 128,000 tokens, roughly 192 pages. Claude 4.5 offers a million tokens, around 1,500 pages. Gemini 1.5 Pro goes even further with 2 million tokens, approximately 3,000 pages. These numbers represent a staggering evolution—just three years ago, in 2022, most systems had context windows of only 2,000 to 4,000 tokens. The field has seen context windows grow a thousandfold in that short time, a pace of improvement that's rare even in rapidly advancing technology sectors.
+
+But here's the crucial detail that surprises many people: both your input and the AI's output count toward the limit. This isn't a limit on how much you can ask—it's a limit on the total conversation size, including everything the AI says back to you. If you paste a 50-page document into the conversation and ask the AI to analyze it, that document immediately consumes a substantial portion of the context window. Then every question you ask and every response the AI provides adds more. A detailed, thorough answer might run 500 or 1,000 tokens on its own. Over the course of a long troubleshooting session—say you're working through a complex financial aid issue or trying to resolve a registration problem—the conversation can grow surprisingly large. You might exchange twenty messages, each running several hundred tokens, and before you realize it, you've consumed thousands of tokens. The early messages start sliding off that metaphorical desk.
+
+## What Happens at the Limit
+
+When a conversation approaches the context window limit, several things begin to happen, and they're worth recognizing because they signal that the AI's working memory is getting strained. First and most obviously, the system starts dropping the earliest messages from the conversation. These deletions happen automatically and invisibly—there's no warning that says "I can no longer see your first three questions." The AI simply stops having access to that information.
+
+Second, even before messages disappear entirely, performance can degrade. Researchers have identified what they call the "lost in the middle" problem, where AI systems pay more attention to information at the very beginning and very end of their context window while giving less weight to material in the middle. If you asked an important question 10,000 tokens ago and now you're at 200,000 tokens, the AI might functionally ignore that earlier information even though it technically still fits in the window.
+
+Third, you might notice coherence starting to drift. The AI might repeat information it provided earlier, unaware that it already addressed your question. It might lose track of the conversation's purpose or fail to maintain consistency with earlier statements. Fourth, responses can become less relevant as the system struggles to track the full scope of what you've discussed. And fifth, processing gets slower and more expensive for the system, though you might not directly notice this—each response requires analyzing the entire context, and larger contexts take more computational work.
+
+## Why Context Windows Have Limits
+
+The natural question is: why don't we just make context windows infinite? Why impose any limit at all? The answer lies in three interconnected challenges.
+
+First is raw computational cost. Every time the AI generates a response, it processes the entire context window. This processing scales quadratically in many architectures, meaning that doubling the context window roughly quadruples the computational work required. A 400,000-token context takes significantly more processing power than a 40,000-token context—not ten times more, but potentially a hundred times more depending on the architecture. This translates directly into cost for the organizations running these systems and into slower response times for users.
+
+Second is the quality degradation problem. Even when systems can technically handle enormous contexts, their performance doesn't scale linearly. That "lost in the middle" phenomenon becomes more pronounced as contexts grow. Attention mechanisms—the way AI systems decide what parts of the context to focus on—become less effective when they're trying to track information across millions of tokens. Current research shows that most models perform best when operating at 80 to 85 percent of their maximum context capacity, not at the maximum itself.
+
+Third is memory and infrastructure. Storing and manipulating these enormous contexts requires massive amounts of RAM and specialized hardware. The larger the context, the more expensive the infrastructure needed to support it.
+
+### Real-World Impact on Conversations
+
+These constraints explain why the context window functions as it does, but they don't eliminate the practical challenges that arise in real use. Consider a student working with the Support Agent to understand BYU-Idaho's financial aid policies. She starts by asking about FAFSA deadlines, then moves to questions about work-study eligibility, then asks about scholarship requirements, and finally wants to understand loan options. Each exchange builds on the previous one. The conversation might span thirty or forty messages over twenty minutes.
+
+Initially, everything works perfectly—the AI remembers that she mentioned working part-time, that she's a sophomore, that she's already submitted her FAFSA. But as the conversation continues, those early details start dropping away. When she asks a follow-up question referencing something from the beginning of the conversation, the AI might respond as if it's the first time hearing about her situation. This isn't a malfunction—it's the natural consequence of a finite working memory encountering a conversation that grew beyond its capacity.
+
+### Document Analysis Challenges
+
+The same issue affects document analysis. Imagine a faculty member who wants the Support Agent to help analyze the entire Employee Handbook—perhaps she's looking for all references to professional development opportunities, or she wants to understand the complete leave policy by reviewing every relevant section. The current Student Handbook runs about 150 pages. That's roughly 112,500 tokens, well within GPT-5.2's 400,000-token capacity.
+
+But that calculation only accounts for the input document. Once the AI starts responding—providing summaries, highlighting relevant sections, answering follow-up questions—each response adds to the total. Ten detailed responses might add another 10,000 tokens. Twenty follow-up questions with comprehensive answers could add 30,000 tokens. Suddenly, you're at 150,000 tokens or more, and you still have substantial headroom, but you're consuming the budget faster than you might expect. If the faculty member uploads multiple policy documents or wants to compare this year's handbook to last year's, the context fills more rapidly, and eventually something has to give way.
+
+## How RAG Complements Context Windows
+
+What makes the BYU-Idaho Support Agent particularly effective despite these constraints is its use of Retrieval-Augmented Generation, or RAG, through Pinecone vector database. Rather than trying to load every policy document into the context window at once, the system searches through a knowledge base and retrieves only the specific passages relevant to your question.
+
+When you ask about dropping a class, the system doesn't load the entire Student Handbook—it retrieves the two or three most relevant sections about drop deadlines, withdrawal procedures, and financial implications. This focused retrieval means the context window is used efficiently, filled with high-value, directly relevant information rather than hundreds of pages that mostly don't apply to your specific question. This is why RAG remains valuable even as context windows grow larger. Even with 400,000 tokens available, retrieving the five most relevant chunks of 1,000 tokens each is faster, more accurate, and more cost-effective than loading 300,000 tokens of potentially relevant material.
+
+### Why Bigger Context Windows Don't Make RAG Obsolete
+
+Some people assume that bigger context windows make RAG obsolete—if the AI can hold entire handbooks in memory, why bother with retrieval systems? But this misunderstands how the technologies complement each other. RAG provides speed by only processing what's needed, cost efficiency by reducing the tokens processed per request, better accuracy by focusing the AI's attention on relevant material, and the ability to stay current by searching databases that update regularly rather than relying on information frozen at training time.
+
+The large context window provides the capacity for the retrieved information plus the full conversation history plus detailed responses. The two technologies work together. RAG selects the relevant needles from the haystack, and the large context window gives the AI room to work with those needles plus everything you've discussed plus its detailed analysis. Without RAG, you'd fill that 400,000-token window quickly and inefficiently. Without a large context window, even perfect retrieval might not leave enough room for complex conversations.
+
+## Working with the Support Agent Effectively
+
+Understanding these dynamics lets you use the Support Agent more effectively. The following strategies help you work within context window constraints while maximizing the AI's capabilities.
+
+### Starting Fresh Conversations
+
+When starting a new topic, begin a fresh conversation rather than continuing an existing one that's already long. If you're troubleshooting your schedule and then want to ask about housing policies, starting fresh ensures the AI has maximum context available for the new topic.
+
+If a conversation is getting long and you notice degraded performance—repetition, irrelevance, forgetting earlier details—summarize the key points and start a new conversation with that summary. Something like: "In our previous conversation, we determined that I need to drop MATH 221 by Friday and that I qualify for a tuition refund. Now I need help understanding how this affects my financial aid." This approach gives the AI the essential context without carrying over thousands of tokens of detailed back-and-forth.
+
+### Being Specific and Front-Loading Context
+
+Be specific and clear in your initial questions. The more precisely you frame your request, the more efficiently the system can retrieve relevant information and respond effectively. Front-load important context. If there are key details the AI needs to know—your major, your year, your specific circumstances—include them early in the conversation rather than revealing them gradually.
+
+### Breaking Down Large Tasks
+
+For document analysis tasks, break large documents into logical sections rather than uploading everything at once. If you're analyzing a lengthy policy document, focus on one section per conversation or ask the AI to extract specific information rather than requesting comprehensive analysis of everything simultaneously.
+
+When you receive an answer, verify it by asking for citations. The Support Agent is designed to reference sources, and checking those sources helps you confirm accuracy while also revealing whether the AI is working from appropriate, current information. If you're engaged in complex problem-solving that requires maintaining lots of context—perhaps planning your entire academic schedule around specific requirements—recognize that you might hit limitations and plan accordingly. Take notes on key points rather than expecting the AI to remember every detail from the beginning of a very long conversation.
+
+## Common Misconceptions
+
+It's worth dispelling some common misconceptions about context windows, because misunderstanding them can lead to unrealistic expectations or confusion about how the system works.
+
+**Context windows are not permanent memory.** When you start a new conversation, the previous one isn't accessible—the AI doesn't remember you from yesterday or last week. Each conversation starts fresh with an empty context window.
+
+**Bigger isn't automatically better in all circumstances.** While 2 million tokens sounds more impressive than 400,000 tokens, research shows that performance often degrades in very long contexts. Many tasks perform better with focused, well-curated contexts of moderate size than with enormous contexts filled with marginally relevant information. This is the quality-versus-quantity principle applied to working memory.
+
+**Context windows are not the same as training data.** The AI's training gave it general knowledge about the world, language understanding, and reasoning patterns—that's frozen knowledge from when the model was trained. The context window is dynamic, changing with every conversation, and contains only the current interaction plus any retrieved documents.
+
+**AI doesn't remember perfectly even within the context window.** The attention mechanisms that determine what the AI focuses on mean that some information gets weighted more heavily than others. Just because something is technically in the context doesn't guarantee the AI will appropriately reference it, especially in very long contexts.
+
+### The "Lost in the Middle" Phenomenon
+
+Research has consistently shown that AI systems exhibit a U-shaped attention pattern: they pay strong attention to information at the very beginning of the context, strong attention to information at the very end, and weaker attention to information in the middle. If you're at 200,000 tokens and you asked a crucial question at token 100,000, the AI might effectively ignore it even though it's well within the context window.
+
+This isn't a bug—it's a consequence of how attention mechanisms work in current architectures. Practically, this means that your most recent messages and the AI's most recent responses get the most attention, information from the very start of the conversation gets moderate attention, and information from the middle gets the least. This is another reason why starting fresh conversations for new topics is effective—it ensures your current question is at the end of the context where it receives maximum attention, while relevant background is either at the beginning or freshly retrieved through RAG.
+
+## The Evolution and Future of Context Windows
+
+The rapid growth in context windows over recent years represents genuine progress, and it's worth appreciating the scale of advancement. In 2022, GPT-3.5 had a 4,096-token limit—roughly six pages. GPT-4 launched in 2023 with 8,192 tokens in its standard version and 32,768 tokens in the extended version—a substantial jump to about 49 pages. By late 2023, models were reaching 128,000 tokens.
+
+Claude 3 reached 200,000 tokens, then Claude 3.5 pushed to 500,000, and Claude 4.5 now offers 1,000,000 tokens. Gemini 1.5 Pro's 2,000,000-token context represents a thousand-fold increase in just three years, from 2,000 tokens to 2,000,000. This expansion enables use cases that were previously impossible—analyzing entire codebases, processing full books, maintaining context across hour-long conversations. But even with these impressive numbers, the fundamental constraints remain. The context window is finite, attention degrades across very long contexts, and computational costs scale with size.
+
+### What's Coming Next
+
+Future developments will likely push boundaries further while addressing current limitations. Researchers are working on better attention mechanisms that maintain more uniform focus across longer contexts, architectural improvements that reduce the quadratic scaling of computational costs, more sophisticated methods for deciding what information to keep versus what to summarize or discard, and hybrid approaches that combine very large context windows with retrieval systems in more integrated ways.
+
+Some experimental systems are exploring memory mechanisms that sit outside the context window—persistent stores of information that the AI can selectively access without consuming context space. These advances will change what's possible, but they won't eliminate the fundamental tradeoff between capacity and performance. There will always be practical limits, even as those limits get pushed further out.
+
+## Practical Perspective for Daily Use
+
+For your daily use of the Support Agent, the 400,000-token context window is genuinely generous. Most conversations won't approach the limit. A typical interaction—you ask about registration deadlines, the AI retrieves relevant policy information and responds with a few hundred tokens, you ask a clarifying question, the AI responds again—might consume 2,000 to 5,000 tokens total. That's barely one percent of the available capacity.
+
+You could have dozens of such exchanges before encountering issues. Even complex, extended conversations that involve retrieving multiple documents and providing detailed explanations rarely exceed 50,000 tokens unless they're truly extensive troubleshooting sessions. The limitation becomes relevant in edge cases—very long conversations, analysis of multiple large documents, or when you're asking the AI to maintain awareness of extensive context accumulated over many exchanges. For typical use, the context window is more than adequate.
+
+### Recognizing the Signs
+
+What matters most is understanding the concept so you can recognize when you're approaching limits and adjust accordingly. If you notice the AI losing track of earlier parts of the conversation, that's your signal. If responses start becoming repetitive or less coherent, that's a warning sign. If the AI seems to forget key details you provided earlier, you're likely running up against context constraints. These signals tell you it's time to start fresh or to explicitly re-state important context. They're not failures of the system—they're natural behaviors of a tool operating at the edge of its working memory capacity.
+
+### Returning to the Desk Analogy
+
+The desk analogy remains the most useful mental model. Your workspace is generous—a large desk with plenty of room for multiple textbooks, notebooks, and papers. For most tasks, you'll never fill it. But if you keep adding materials without putting anything away, eventually you'll run out of space. The oldest items will slide off the edge. You'll lose track of what was in those early notes. Your ability to see the full picture will degrade.
+
+Understanding this doesn't mean you need to constantly worry about running out of room. It means you should be aware of the constraint, recognize the signs when you're approaching it, and know the simple strategies for working within it effectively. Use the space you have generously, but when you move to a new topic or notice signs of strain, clear the desk and start fresh. That's not a limitation—it's just how working memory functions, whether for humans studying with physical materials or AI systems managing conversational context.
+
+## Key Takeaways
+
+- **Context window is working memory, not permanent memory** - It holds what the AI can currently see, and it resets with each new conversation
+- **Measured in tokens with roughly 750 tokens per page** - The BYU-Idaho Support Agent has 400,000 tokens, approximately 600 pages or 300,000 words
+- **Both input and output count toward the limit** - Everything you say and everything the AI responds with consumes context capacity
+- **Performance degrades as limits approach** - Watch for repetition, irrelevance, or forgotten details as signals that context is getting strained
+- **RAG and large contexts work together** - Retrieval systems remain valuable even with generous context windows, providing speed and accuracy
+- **Start fresh for new topics** - Beginning a new conversation gives you maximum available context for each distinct task
+- **Context windows have grown dramatically** - From 2,000 tokens in 2022 to 2,000,000 in 2025, but constraints still exist
+- **Lost in the middle is real** - AI systems pay most attention to the beginning and end of contexts, less to the middle
+
+## Related Documentation
+
+- [What is RAG?](/learn/rag/what-is-rag) - How retrieval systems work with context windows to provide accurate information
+- [How LLMs Are Trained](/learn/basics/how-llms-are-trained) - Understanding the foundation that makes context windows possible
+- [LLM Weaknesses](/learn/advanced/llm-weaknesses) - Context limitations and other challenges in AI systems

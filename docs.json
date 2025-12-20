@@ -26,20 +26,30 @@
             "group": "Basics of Artificial Intelligence",
             "pages": [
               "learn/basics/overview",
-              "learn/basics/what-is-rag",
-              "learn/basics/what-is-chunking",
               "learn/basics/how-llms-are-trained",
-              "learn/basics/what-is-model-alignment"
+              "learn/basics/what-is-model-alignment",
+              "learn/basics/what-is-context-window"
             ]
           },
           {
             "group": "Advanced Topics",
             "pages": [
-              "learn/advanced/why-markdown",
               "learn/advanced/docs-as-code",
               "learn/advanced/llm-weaknesses",
               "learn/advanced/ai-native-knowledge-bases-research"
             ]
+          },
+          {
+            "group": "Retrieval Augmentation",
+            "pages": [
+              "learn/rag/what-is-rag",
+              "learn/rag/what-is-chunking",
+              "learn/rag/vector-databases"
+            ]
+          },
+          {
+            "group": "Tips & Tricks",
+            "pages": ["learn/tips-tricks/why-markdown"]
           }
         ]
       },
