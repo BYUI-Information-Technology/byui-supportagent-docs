@@ -121,7 +121,8 @@
     }
   },
   "search": {
-    "prompt": "Search documentation..."
+    "prompt": "Search documentation...",
+    "location": "top"
   },
   "footer": {
     "socials": {
