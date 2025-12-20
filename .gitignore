@@ -18,6 +18,10 @@ node_modules/
 .claude/*
 .claude
 
+# Archived
+archive/*
+archive
+
 # Build output
 dist/
 build/

@@ -2,6 +2,10 @@
 drafts/
 *.draft.mdx
 
+# Archived
+archive/*
+archive
+
 # Exclude internal documentation
 templates*
 templates/*

@@ -1,0 +1,49 @@
+---
+title: Agent Example
+description: See an example of the BYUI Support Agent written in Python using the OpenAI Agents SDK.
+---
+
+## Build the BYUI Support Agent
+
+Let's build the BYUI Support Agent with the OpenAI Agents SDK (Python).
+
+### Create Agent
+
+```python
+from agents import Agent
+
+support_agent = Agent(
+    name="BYUI Support Agent",
+    instructions="You are the BYU-Idaho Support Agent. Use the knowledge base tool.",
+    model="gpt-5.2",
+    model_settings=(reasoning=Reasoning(effort="medium"), verbosity="low",),
+)
+
+```
+
+### Add Knowledge Base
+
+Let's give the agent access to the knowledge base in the form of a "Tool." At BYU-Idaho, we use a highly performant vector database from Pinecone. We use automation to sync the knowledge base, used by human agents in the Support Center, with an index in Pinecone, to keep the Support Agent's "knowledge base" updated.
+
+The Agents SDK allows developers to create custom tools by simply defining a simple Python function and wrapping it with a `function_tool` decorator.
+
+```python
+
+@function_tool
+def knowledge_base(query: str):
+    """
+    Search the BYU-Idaho knowledge base.
+    """
+    from pinecone import Pinecone
+
+    embedding = embeddings
+    index = "bsc-knowledge-base"
+
+    # Search Pinecone
+    search_results = index.query(
+        vector=embedding,
+        top_k=10,
+        namespace="default",
+        include_metadata=True,
+    )
+```

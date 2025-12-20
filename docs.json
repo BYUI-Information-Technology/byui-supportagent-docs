@@ -16,7 +16,7 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["getting-started/quickstart", "getting-started/overview"]
+            "pages": ["getting-started/overview", "getting-started/quickstart"]
           }
         ]
       },
@@ -61,8 +61,7 @@
             "group": "Technical Documentation",
             "pages": [
               "technical/chat-widget",
-              "technical/infrastructure",
-              "technical/retrieval-augmentation",
+              "technical/agent-example.mdx",
               "technical/specifications"
             ]
           }
