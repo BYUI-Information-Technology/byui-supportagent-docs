@@ -27,7 +27,9 @@
             "pages": [
               "learn/basics/overview",
               "learn/basics/what-is-rag",
-              "learn/basics/what-is-chunking"
+              "learn/basics/what-is-chunking",
+              "learn/basics/how-llms-are-trained",
+              "learn/basics/what-is-model-alignment"
             ]
           },
           {
