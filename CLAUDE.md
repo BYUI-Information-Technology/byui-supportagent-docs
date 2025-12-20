@@ -243,6 +243,7 @@ When creating content that requires research or exploration of complex topics, f
 Use the **Explore** or **general-purpose** subagent to gather information, understand the topic, and collect relevant details.
 
 **When to use research workflow:**
+
 - Creating content about new or unfamiliar topics
 - Exploring technical concepts that require investigation
 - Gathering examples, use cases, or best practices
@@ -267,6 +268,7 @@ Task(
 After research is complete, use the **writing-agent** to create the article based on the research findings.
 
 **Critical Requirements:**
+
 1. **Audience-Appropriate Content** - Tailor complexity to the target section:
    - `learn/basics/` - Beginner level, jargon-free, foundational concepts
    - `learn/advanced/` - Technical depth, assumes AI knowledge
@@ -311,6 +313,7 @@ Task(
 **User Request:** "Create an article about prompt engineering for the Tips & Tricks section"
 
 **Step 1 - Research:**
+
 ```txt
 Task(
   subagent_type='general-purpose',
@@ -322,6 +325,7 @@ Task(
 ```
 
 **Step 2 - Writing:**
+
 ```txt
 Task(
   subagent_type='writing-agent',
@@ -350,6 +354,7 @@ Task(
 For straightforward content where research isn't needed, proceed directly to the writing-agent.
 
 **When to skip research:**
+
 - Editing or improving existing content
 - Writing about well-understood topics
 - Creating content based on user-provided information
