@@ -93,10 +93,9 @@
     ]
   },
   "logo": {
-    "light": "/assets/lightmode_logo.png",
-    "dark": "/assets/darkmode_logo.png",
-    "href": "https://www.byui.edu",
-    "height": 56
+    "light": "/assets/lightmode_logo_resized.png",
+    "dark": "/assets/darkmode_logo_resized.png",
+    "href": "https://www.byui.edu"
   },
   "appearance": {
     "default": "light",
