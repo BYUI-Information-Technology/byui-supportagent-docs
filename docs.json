@@ -10,7 +10,7 @@
   },
   "favicon": "/assets/favicon.svg",
   "banner": {
-    "content": "🚀 The BYUI Support Agent is now live in production!",
+    "content": "Announcement: The BYUI Support Agent is now live in production! 🚀",
     "dismissible": true
   },
   "navigation": {
