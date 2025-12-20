@@ -1,0 +1,12 @@
+# Exclude draft documents
+drafts/
+*.draft.mdx
+
+# Exclude internal documentation
+templates*
+templates/*
+
+# Exclude Agent Files
+.claude/*
+.claude
+CLAUDE.md
