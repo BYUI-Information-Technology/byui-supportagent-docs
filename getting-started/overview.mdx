@@ -26,18 +26,7 @@ The BYU-Idaho Support Center is tasked with supporting a larger student populati
 
 ## How It Works
 
-Powered by GPT-5.2 and retrieval augmented generation (RAG) technology, the Support Agent draws from a comprehensive knowledge base curated by the BYU-Idaho Support Center's staff to provide accurate, grounded responses based on official knowledge sources. The application is built using the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/), which enables the creation of completely agentic systems for tasks ranging from simple question answering to complex multi-agent orchestration.
-
-### Multi-Agent Architecture
-
-Unlike traditional chatbots that follow rigid decision trees, the Support Agent uses a **multi-agent orchestration framework** where specialized AI agents collaborate autonomously to deliver accurate, compliant, and contextually aware responses. This architecture includes:
-
-- **Knowledge Retrieval Agent**: Searches the internal knowledge base for relevant information
-- **Web Research Agent**: Finds current information from official university sources
-- **Orchestrator Agent**: Coordinates between agents and determines the best path to answer your question
-- **Escalation Agent**: Recognizes when human assistance is needed and routes you to the appropriate resource
-
-This modular design means the system can easily be extended to support additional departments and integrate with more campus systems over time.
+Powered by GPT-5.2 and retrieval augmented generation (RAG) technology, the "Support Agent" is an AI agent that draws from a comprehensive knowledge base curated by the BYU-Idaho Support Center's staff to provide accurate, grounded responses based on official knowledge sources.
 
 ## What is an AI agent?
 
@@ -52,6 +41,47 @@ For example, an AI agent at BYU-Idaho could:
 These agents don't replace people—they extend the university's ability to serve. They operate under clear guardrails, working alongside faculty and staff to reduce repetitive workloads and provide students with faster, more consistent support.
 
 The BYUI Support Agent takes this concept further by using **multiple agents working together**. Instead of a single agent trying to do everything, specialized agents handle specific tasks (like searching the knowledge base, researching current policies, or deciding when to escalate to a human). This multi-agent approach provides more accurate, reliable, and contextually appropriate responses.
+
+### Multi-Agent Architecture
+
+Unlike traditional chatbots that follow rigid decision trees, the Support Agent uses a **multi-agent orchestration framework** where specialized AI agents collaborate autonomously to deliver accurate, compliant, and contextually aware responses.
+
+The Support Agent is built using the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/), which enables the creation of completely agentic systems for tasks ranging from simple question answering to complex multi-agent orchestration.
+
+- **Gaurdrail Agent**: Dedicated to monitoring and safegaurding data privacy, reducing risk for harm, and blocking illegal, unethical, and harmful activity
+- **Support Agent**: Dedicated to frontline university support for both students and employees
+- **Research Agent**: Subagent that specializes in conducting research. This agent is currently configured to help students learn about AI tools that can help them in the future career fields
+
+Using the OpenAI Agents SDK allowed to to build a future-proof, agentic system that can extend to additional departments, integrate with existing systems, automate and complete tasks, and serve as a platform for other AI agents.
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#1e3a8a','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','lineColor':'#3b82f6','secondaryColor':'#0f172a','tertiaryColor':'#1e293b','background':'transparent'}}}%%
+  flowchart LR
+    Human["fa:fa-user Human<br/><small>Student or Employee</small>"]
+    Guardrail["fa:fa-shield-alt Guardrail Agent<br/><small>Privacy & Safety Monitor</small>"]
+    Support["fa:fa-robot Support Agent<br/><small>Frontline Support</small>"]
+    Research["fa:fa-search Research Agent<br/><small>Specialized Research</small>"]
+
+    Human -->|Asks Question| Guardrail
+    Guardrail -->|Monitors Input| Support
+    Support -->|Needs Research| Research
+    Research -->|Provides Information| Support
+    Support -->|Generates Response| Guardrail
+    Guardrail -->|Monitors Output| Human
+
+    style Human fill:#1e3a8a,stroke:#1e40af,stroke-width:2px,color:#fff
+    style Guardrail fill:#0f172a,stroke:#1e40af,stroke-width:2px,color:#fff
+    style Support fill:#1e3a8a,stroke:#1e40af,stroke-width:2px,color:#fff
+    style Research fill:#1e293b,stroke:#1e40af,stroke-width:2px,color:#fff
+```
+
+This modular design means the system can easily be extended to support additional departments and integrate with more campus systems over time.
+
+Additional Agents:
+
+- **Career & Academic Advising**
+- **Financial Aid**
+- **Advising**
 
 ## Primary Objectives
 
