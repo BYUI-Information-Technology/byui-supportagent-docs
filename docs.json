@@ -120,6 +120,6 @@
     "raiseIssue": true
   },
   "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "gemini"]
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp"]
   }
 }
