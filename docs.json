@@ -120,51 +120,6 @@
     "raiseIssue": true
   },
   "contextual": {
-    "options": [
-      "copy",
-      "view",
-      {
-        "title": "Ask Claude",
-        "description": "Ask Claude to explain this Support Agent Docs page",
-        "href": {
-          "base": "https://claude.ai/new",
-          "query": [
-            {
-              "key": "q",
-              "value": "You are analyzing documentation for BYU-Idaho's Support Agent, an AI-powered chatbot using RAG and OpenAI GPT-5.2 for student support.\n\nDocumentation page:\n\n$page\n\nHelp me understand this content, explain technical concepts clearly, and show how they apply to the Support Agent platform."
-            }
-          ]
-        }
-      },
-      {
-        "title": "Ask ChatGPT",
-        "description": "Use ChatGPT to explain this Support Agent Docs page",
-        "href": {
-          "base": "https://chatgpt.com",
-          "query": [
-            {
-              "key": "q",
-              "value": "You are analyzing documentation for BYU-Idaho's Support Agent, an AI-powered chatbot using RAG and OpenAI GPT-5.2 for student support.\n\nDocumentation page:\n\n$page\n\nHelp me understand this content, explain technical concepts clearly, and show how they apply to the Support Agent platform."
-            }
-          ]
-        }
-      },
-      {
-        "title": "Ask Perplexity",
-        "description": "Use Perplexity to explain this Support Agent Docs page",
-        "href": {
-          "base": "https://www.perplexity.ai",
-          "query": [
-            {
-              "key": "q",
-              "value": "You are analyzing documentation for BYU-Idaho's Support Agent, an AI-powered chatbot using RAG and OpenAI GPT-5.2 for student support.\n\nDocumentation page:\n\n$page\n\nHelp me understand this content, explain technical concepts clearly, and show how they apply to the Support Agent platform."
-            }
-          ]
-        }
-      },
-      "chatgpt",
-      "claude",
-      "perplexity"
-    ]
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "gemini"]
   }
 }
