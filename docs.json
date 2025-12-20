@@ -63,9 +63,17 @@
               "technical/chat-widget",
               "technical/infrastructure",
               "technical/retrieval-augmentation",
-              "technical/specifications",
-              "technical/release-notes/september-release"
+              "technical/specifications"
             ]
+          }
+        ]
+      },
+      {
+        "tab": "Release Notes",
+        "groups": [
+          {
+            "group": "Releases",
+            "pages": ["release-notes/release-notes"]
           }
         ]
       },
