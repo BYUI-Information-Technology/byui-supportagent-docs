@@ -61,7 +61,7 @@
             "group": "Technical Documentation",
             "pages": [
               "technical/chat-widget",
-              "technical/agent-example.mdx",
+              "technical/agent-example",
               "technical/specifications"
             ]
           }
