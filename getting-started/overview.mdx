@@ -50,84 +50,30 @@ These agents don't replace people—they extend the university's ability to serv
 
 The BYUI Support Agent takes this concept further by using **multiple agents working together**. Instead of a single agent trying to do everything, specialized agents handle specific tasks (like searching the knowledge base, researching current policies, or deciding when to escalate to a human). This multi-agent approach provides more accurate, reliable, and contextually appropriate responses.
 
-### Multi-Agent Architecture
+## Agent Architecture
 
 Unlike traditional chatbots that follow rigid decision trees, the Support Agent uses a **multi-agent orchestration framework** where specialized AI agents collaborate autonomously to deliver accurate, compliant, and contextually aware responses.
 
 The Support Agent is built using the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/), which enables the creation of completely agentic systems for tasks ranging from simple question answering to complex multi-agent orchestration.
 
+### Current Agents:
+
 - **Gaurdrail Agent**: Dedicated to monitoring and safegaurding data privacy, reducing risk for harm, and blocking illegal, unethical, and harmful activity
 - **Support Agent**: Dedicated to frontline university support for both students and employees
 - **Research Agent**: Subagent that specializes in conducting research. This agent is currently configured to help students learn about AI tools that can help them in the future career fields
 
-Using the OpenAI Agents SDK allowed to to build a future-proof, agentic system that can extend to additional departments, integrate with existing systems, automate and complete tasks, and serve as a platform for other AI agents.
+The OpenAI Agents SDK allows us to build a future-proof, agentic system that can extend to additional departments, integrate with existing systems, automate and complete tasks, and serve as a platform for other AI agents.
 
-This modular design means the system can easily be extended to support additional departments and integrate with more campus systems over time.
+This modular design means our platform can be extended to support additional departments and integrate with more campus systems over time.
 
-Additional Agents:
-
-- Career & Academic Advising
-- Financial Aid
-- Advising
-
-## Primary Objectives
-
-In order to successfully implement this initiative, the following primary objectives are essential:
-
-- **Leverage AI**: Leverage the advantages of generative artificial intelligence such as cost, availability, consistency, and speed for common support tasks like question answering.
-- **Build agent-centric**: Build a future-proof, agentic system that can extend to additional departments, integrate with existing systems, automate and complete tasks, and serve as a platform for other AI agents.
-- **Align with BYU-Idaho Values**: Build an agent that is aligned with the values of BYU-Idaho, including the Honor Code, and is designed to help students and employees at BYU-Idaho.
-- **Be Measurable**: Build an agent that is measurable and can be evaluated to ensure it is meeting the needs of students and employees at BYU-Idaho. In other words, we must be able to measure the success of the agent and make improvements based on the data.
-
-## Evolution from Previous System
-
-The Support Agent represents a fundamental shift from the university's previous approach to automated support:
-
-| Feature              | Previous System (Genesys) | Support Agent                        |
-| -------------------- | ------------------------- | ------------------------------------ |
-| **Architecture**     | Intent-based NLU          | Generative AI (RAG + Agents)         |
-| **Maintenance**      | Manual intent training    | Dynamic learning from knowledge base |
-| **Flexibility**      | Rigid flow design         | Adaptive multi-agent orchestration   |
-| **Scalability**      | Limited                   | Modular and department-expandable    |
-| **Response Context** | Static                    | Context-aware with real-time lookups |
-
-This shift from **intent-based AI** to **contextual generative AI** enables the system to support more nuanced, natural, and scalable conversations across all support domains.
-
-## Future Expansion
-
-The Support Agent is designed as a platform that can grow with the university's needs. Future phases may include:
-
-- **Department-specific agents**: Specialized sub-agents for Financial Aid, Admissions, Student Records, and Advising
-- **Enhanced integrations**: Direct connections to more campus systems for automated task completion
-- **Expanded capabilities**: Proactive notifications, appointment scheduling, and personalized recommendations
-- **Cross-department collaboration**: Multiple department agents working together to solve complex student needs
-
-The modular architecture ensures that new capabilities can be added without disrupting existing functionality.
-
-## What Makes It Special
-
-The BYU-Idaho Support Agent is designed specifically for BYU-Idaho students and staff:
-
-### BYU-Idaho Focused
-
-- Trained exclusively on official BYU-Idaho policies and procedures
-- Understands the unique culture and values of the university
-- Provides answers that align with the values of BYU-Idaho
-
-### Advanced AI Technology
+## Advanced AI Technology
 
 - **OpenAI GPT-5.2**: Latest conversational AI technology for natural interactions from OpenAI
 - **Smart Search**: Uses Pinecone vector search to instantly find relevant information from the internal knowledge base
 - **Context Understanding**: Accurate understanding of content and context tailored to the needs of BYU-Idaho students and employees
 - **Multi-Agent RAG System**: Multiple specialized agents work together to handle knowledge retrieval, web research, and escalation decisions
 
-### Private & Secure
-
-- **FERPA-compliant**: Protects student privacy and educational records with built-in compliance guardrails
-- **Enterprise-grade Security**: Uses Microsoft Azure's enterprise-grade cloud security and reliability
-- **Church Account Authentication**: Secure Single Sign-On (SSO) authentication for all users
-
-### Integrated with Campus Systems
+## Integrated with Campus Systems
 
 The Support Agent is connected to key campus systems to provide seamless support:
 
@@ -135,12 +81,6 @@ The Support Agent is connected to key campus systems to provide seamless support
 - **TeamDynamix**: For ticket creation and issue tracking
 - **Pinecone**: Enterprise-grade vector database for fast, accurate knowledge retrieval
 - **Microsoft**: Built on Microsoft's enterprise ecosystem for reliability, security, and scalability
-
-### Always Available
-
-- **24/7 Access**: Get help any time, day or night
-- **Instant Responses**: No waiting - answers appear in seconds
-- **No Limits**: Ask as many questions as you need
 
 ## Tips for Better Results
 
@@ -150,16 +90,6 @@ To get the most helpful responses from the Support Agent:
 - **Provide Context**: Mention your situation (e.g., "I'm having a hard time finding the link to Canvas...")
 - **Ask Follow-ups**: Don't hesitate to ask for clarification or more details
 - **Leave Feedback**: Click the star button on the response you receive to provide feedback (this helps us improve the agent)
-
-## Governance and Support
-
-The Support Agent is developed and maintained by BYU-Idaho Information Technology in collaboration with the Support Center:
-
-- **Project Lead**: Ron Vallejo, AI Engineer
-- **Governance**: IT Portfolio and Project Management Council, and AI Governance Council
-- **Stakeholder Partners**: BYU-Idaho Support Center and Student Services
-
-The project follows university governance standards for AI applications and is maintained internally with minimal IT overhead. Continuous improvements are made based on user feedback and performance metrics.
 
 ## Need Additional Help?
 
