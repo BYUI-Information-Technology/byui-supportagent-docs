@@ -2,11 +2,12 @@
 title: "Overview"
 description: "Learn about the Support Agent platform, BYU-Idaho's agentic support system for students and employees."
 mode: "wide"
+sidebarTitle: "Overview"
 ---
 
-<Info>
-  Authentication is required in order to access the platform.
-</Info>
+<Check>
+  Authentication is required in order to access the Support Agent platform.
+</Check>
 
 The "**BYUI Support Agent**" or simply "**Support Agent**" is an advanced **multi-agent generative AI system** developed by AI engineers at BYU-Idaho to help students and employees of **Brigham Young University-Idaho** quickly find answers to common support questions. As of December 2025, the platform is accessible via the embedded [chat widget](/technical/chat-widget.mdx) on all byui.edu websites.
 
@@ -28,7 +29,7 @@ The BYU-Idaho Support Center is tasked with supporting a larger student populati
 
 ## How It Works
 
-Powered by GPT-5.2 and retrieval augmented generation (RAG) technology, the "Support Agent" is an AI agent that draws from a comprehensive knowledge base curated by the BYU-Idaho Support Center's staff to provide accurate, grounded responses based on official knowledge sources.
+Powered by [**OpenAI GPT-5.2**](https://openai.com/index/introducing-gpt-5-2/) and [retrieval augmented generation (RAG)](/learn/rag/what-is-rag) technology, the "Support Agent" is an AI agent that draws from a comprehensive knowledge base curated by the BYU-Idaho Support Center's staff to provide accurate, grounded responses based on official knowledge sources.
 
 ## What is an AI agent?
 
@@ -56,34 +57,13 @@ The Support Agent is built using the [OpenAI Agents SDK](https://openai.github.i
 
 Using the OpenAI Agents SDK allowed to to build a future-proof, agentic system that can extend to additional departments, integrate with existing systems, automate and complete tasks, and serve as a platform for other AI agents.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#1e3a8a','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','lineColor':'#3b82f6','secondaryColor':'#0f172a','tertiaryColor':'#1e293b','background':'transparent'}}}%%
-  flowchart LR
-    Human["fa:fa-user Human<br/><small>Student or Employee</small>"]
-    Guardrail["fa:fa-shield-alt Guardrail Agent<br/><small>Privacy & Safety Monitor</small>"]
-    Support["fa:fa-robot Support Agent<br/><small>Frontline Support</small>"]
-    Research["fa:fa-search Research Agent<br/><small>Specialized Research</small>"]
-
-    Human -->|Asks Question| Guardrail
-    Guardrail -->|Monitors Input| Support
-    Support -->|Needs Research| Research
-    Research -->|Provides Information| Support
-    Support -->|Generates Response| Guardrail
-    Guardrail -->|Monitors Output| Human
-
-    style Human fill:#1e3a8a,stroke:#1e40af,stroke-width:2px,color:#fff
-    style Guardrail fill:#0f172a,stroke:#1e40af,stroke-width:2px,color:#fff
-    style Support fill:#1e3a8a,stroke:#1e40af,stroke-width:2px,color:#fff
-    style Research fill:#1e293b,stroke:#1e40af,stroke-width:2px,color:#fff
-```
-
 This modular design means the system can easily be extended to support additional departments and integrate with more campus systems over time.
 
 Additional Agents:
 
-- **Career & Academic Advising**
-- **Financial Aid**
-- **Advising**
+- Career & Academic Advising
+- Financial Aid
+- Advising
 
 ## Primary Objectives
 
@@ -141,7 +121,6 @@ The BYU-Idaho Support Agent is designed specifically for BYU-Idaho students and 
 - **FERPA-compliant**: Protects student privacy and educational records with built-in compliance guardrails
 - **Enterprise-grade Security**: Uses Microsoft Azure's enterprise-grade cloud security and reliability
 - **Church Account Authentication**: Secure Single Sign-On (SSO) authentication for all users
-- **Confidential**: All data is encrypted and stored in BYU-Idaho's private Azure tenant
 
 ### Integrated with Campus Systems
 
@@ -166,16 +145,6 @@ To get the most helpful responses from the Support Agent:
 - **Provide Context**: Mention your situation (e.g., "I'm having a hard time finding the link to Canvas...")
 - **Ask Follow-ups**: Don't hesitate to ask for clarification or more details
 - **Leave Feedback**: Click the star button on the response you receive to provide feedback (this helps us improve the agent)
-
-## Getting Started
-
-Ready to start using the BYU-Idaho Support Agent? Getting help is easy!
-
-### How to Access the Support Agent
-
-1. **Visit the website**: Go to https://supportagent.byui.edu
-2. **Sign in**: Use your Church username and password to access the agent.
-3. **Start Chatting**: Type your question and get instant AI-powered responses
 
 ## Governance and Support
 
