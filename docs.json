@@ -42,7 +42,7 @@
             "pages": [
               "learn/advanced/overview",
               "learn/advanced/ai-native-knowledge-bases-research",
-              "learn/advanced/character-training.mdx",
+              "learn/advanced/character-training",
               "learn/advanced/docs-as-code",
               "learn/advanced/llm-weaknesses"
             ]
