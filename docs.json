@@ -41,9 +41,10 @@
             "group": "Advanced Topics",
             "pages": [
               "learn/advanced/overview",
+              "learn/advanced/ai-native-knowledge-bases-research",
+              "learn/advanced/character-training.mdx",
               "learn/advanced/docs-as-code",
-              "learn/advanced/llm-weaknesses",
-              "learn/advanced/ai-native-knowledge-bases-research"
+              "learn/advanced/llm-weaknesses"
             ]
           },
           {
@@ -53,12 +54,6 @@
               "learn/rag/what-is-rag",
               "learn/rag/what-is-chunking",
               "learn/rag/vector-databases"
-            ]
-          },
-          {
-            "group": "Principles",
-            "pages": [
-              "learn/principles/character-training"
             ]
           },
           {
