@@ -4,6 +4,44 @@ description: Product updates, new features, and improvements for the BYU-Idaho S
 rss: true
 ---
 
+<Update label="December 22, 2025" tags={["Bug Fixes", "Critical"]} rss={{ title: "Live Agent Handoff Fully Restored" }}>
+
+## Live Agent Handoff Fixed
+
+**What Was Broken**
+
+The BSC reported that users were unable to connect to live support representatives through the Support Agent. When requesting to speak with a human agent, the connection process would fail, preventing access to the BYUI Support Center team.
+
+**Root Cause**
+
+During a system update, we modernized the handoff process to support richer context sharing with live agents. While the core functionality was updated, references in the agent's instructions and connection detection logic were missed, breaking the handoff chain.
+
+**What We Fixed**
+
+* Updated the AI agent's instructions to use the correct handoff procedure with enhanced parameters
+* Fixed the system's ability to detect successful handoff attempts and trigger the Genesys bridge
+* Removed outdated configuration files to prevent future confusion
+
+**Verification**
+
+The fix has been tested and confirmed working in production. Users can now successfully connect to live support representatives during business hours.
+
+**User Impact**
+
+You can now:
+
+* Request to speak with a live agent at any time during business hours (currently holiday hours)
+* Be seamlessly connected to the BYUI Support Center team via chat
+* Continue your conversation with a real person when you need additional assistance
+
+**Technical Details**
+
+* Backend Version: `latest-main-20251222-093004`
+* Files Updated: `prompt.py`, `api.py`
+* Commits: 94421d2, 7709f41, 577eb28, 9dd818d
+
+</Update>
+
 <Update label="December 15, 2025" description="v1.5.0 - Version Update" tags={["New Features", "Security", "Improvements"]} rss={{ title: "Dynamic Quick Actions, CORS Security Enhancements, and Reasoning UI Features" }}>
 
 ## Dynamic Quick Actions Feature
