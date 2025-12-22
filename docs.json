@@ -56,6 +56,12 @@
             ]
           },
           {
+            "group": "Principles",
+            "pages": [
+              "learn/principles/character-training"
+            ]
+          },
+          {
             "group": "Tips & Tricks",
             "pages": ["learn/tips-tricks/why-markdown"]
           }

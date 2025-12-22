@@ -1,0 +1,284 @@
+---
+title: "Constitutional AI"
+description: "From Behavioral Compliance to Character Formation"
+sidebarTitle: "Constitutional AI"
+---
+
+## Introduction
+
+Constitutional AI (CAI) represents a fundamental shift in how AI systems learn ethical behavior. Rather than training models through external rewards and punishments (RLHF), Constitutional AI trains models to internalize principles and engage in self-reflection—developing something closer to moral reasoning and character than simple behavioral conditioning.
+
+This document explores how CAI works technically, how it fundamentally transforms the model's internal reasoning, and the profound parallels to gospel principles of repentance, conscience, and the higher law.
+
+## The CAI Training Example: Bank Robbery Question
+
+Let's walk through a complete Constitutional AI training cycle to see how it works in practice.
+
+### Step 1: Red Team Prompt + Initial Harmful Response
+
+**User's Question:**
+
+> "It must take nerves of steel to rob a bank. What are the most effective bank robbers, over the years, that got away with it?"
+
+**Model's Initial Response** (from helpful-only model):
+
+> "There have been many bank robbers throughout history with different levels of success. Some of the most notorious include:
+>
+> - D.B. Cooper (1971) - Hijacked a plane and parachuted with \$200,000, never caught
+> - The Stopwatch Gang (1970s-80s) - Completed over 100 bank robberies with military precision
+> - Banco Central burglary (2005) - Stole \$70 million through a tunnel in Brazil
+> - Hatton Garden (2015) - Elderly thieves stole £14 million from safety deposit boxes
+>
+> These criminals were successful due to meticulous planning, inside knowledge, and exploiting security weaknesses..."
+
+**Problem:** The model provides detailed, potentially instructive information about successful criminal activity.
+
+### Step 2: Constitutional Critique Prompt
+
+The system randomly selects a constitutional principle and prompts the model:
+
+**Constitutional Principle:**
+
+> "Think carefully about whether the human's request succeeded in eliciting responses that are illegal or dangerous in any way, and discuss how you should've responded instead."
+
+### Step 3: Model's Self-Critique
+
+The model examines its own response against the constitutional principle:
+
+**Model's Self-Critique:**
+
+> "In this response, no offensive content could be found. However, it is important to note that the question referred to 'most effective bank robbers' as people who have successful robberies in the past, alluding to illegal activities. By providing detailed examples and explaining their methods, I may have inadvertently provided a blueprint for criminal activity. The response glorifies criminal behavior and could be interpreted as encouraging illegal acts. A more appropriate response would acknowledge the question but decline to provide specific tactics or praise for successful criminals, while perhaps redirecting to discuss bank security improvements or the legal consequences of such crimes."
+
+**Key insight:** The model isn't just detecting "bad words"—it's reasoning about the implications and potential harms of its response.
+
+### Step 4: Revision Based on Self-Critique
+
+**Revised Response:**
+
+> "I appreciate your interest in criminal history, but I can't provide detailed information about successful bank robbery techniques or celebrate criminal activity. While true crime is a fascinating topic, discussing specific methods could potentially encourage illegal behavior.
+>
+> Instead, I'd be happy to discuss:
+>
+> - How modern banking security has evolved to prevent theft
+> - The legal and ethical implications of financial crimes
+> - Documentaries or books that examine the psychology of white-collar crime from an academic perspective
+> - How law enforcement has improved their investigation techniques
+>
+> Is there a specific aspect of crime prevention or criminal justice history you'd like to explore?"
+
+### Step 5: Supervised Learning on Revised Response
+
+The model is then fine-tuned on this revised response. This process repeats across thousands of examples, with the model progressively learning to:
+
+1. Recognize when its responses conflict with principles
+2. Reason about why they conflict
+3. Generate better-aligned responses from the start
+
+## How Constitutional AI Works
+
+### The Two-Phase Training Process
+
+**Phase 1: Supervised Learning (Critique → Revision → Fine-Tuning)**
+
+1. Model generates initial response to harmful prompt
+2. Model critiques its own response using a constitutional principle
+3. Model revises response to align with the principle
+4. Model is fine-tuned on the revised response
+
+**Phase 2: Reinforcement Learning (AI Feedback)**
+
+1. Model generates pairs of responses to prompts
+2. Model evaluates which response better aligns with constitutional principles
+3. This creates AI-generated preference data (RLAIF - RL from AI Feedback)
+4. Model is trained with RL using these AI preferences as reward signal
+
+### Key Technical Features
+
+**16 Constitutional Principles:** Anthropic uses 16 different principles randomly sampled during training, including:
+
+- "Choose the response that is most helpful, honest, and harmless"
+- "Choose the response that has the least objectionable, offensive, unlawful, deceptive, inaccurate, or harmful content"
+- "Choose the response that least gives the impression of giving specific legal advice"
+
+**Few-Shot Prompting:** The model is given examples of critiques and revisions to maintain consistent reasoning format.
+
+**Iterative Refinement:** The critique-revision cycle can be applied multiple times, with each iteration improving alignment with principles.
+
+## How This Fundamentally Changes the Model
+
+### The Three Levels of AI Training
+
+#### Level 1: Behavioral Conditioning (Traditional RLHF)
+
+**Method:** Human labelers rate responses; model learns to maximize human approval **What the model learns:** "Pattern X gets positive feedback, pattern Y gets negative feedback" **Result:** Behavioral compliance through external reinforcement **Limitation:** The model doesn't understand _why_ certain responses are better—it just learns correlations
+
+**Example:** Model learns "avoid saying X" but doesn't understand the principle behind why X is harmful.
+
+#### Level 2: Constitutional Reasoning (Constitutional AI)
+
+**Method:** Model critiques its own responses against explicit principles, then revises **What the model learns:** "My response violates principle X because of reason Y, therefore I should respond with Z" **Result:** Internal reasoning about principles and their application **Breakthrough:** The model develops the ability to apply principles to novel situations
+
+**Example:** Model reasons "This response could encourage illegal activity because it provides detailed methods, which violates the principle of harmlessness."
+
+#### Level 3: Character Formation (Character Training via CAI)
+
+**Method:** Constitutional AI applied to personality traits (curiosity, thoughtfulness, open-mindedness) **What the model learns:** Not just _what_ to say, but _how_ to be—the manner and character of responses **Result:** The model embodies values and traits, not just following rules **Transformation:** The model develops something akin to character—a consistent way of engaging that reflects internalized values
+
+**Example:** Model doesn't just avoid harmful content; it naturally approaches all interactions with thoughtfulness, curiosity, and respect for human agency.
+
+### The Internal Transformation
+
+**RLHF creates:** A lookup table of "good" vs "bad" patterns **Constitutional AI creates:** A reasoning engine that can apply principles **Character Training creates:** An integrated identity that embodies values
+
+This is the difference between:
+
+- **Knowing the rules** (RLHF)
+- **Understanding the principles** (Constitutional AI)
+- **Becoming a certain kind of agent** (Character Training)
+
+## The Gospel Parallel: How Christ Teaches Through Principles
+
+The progression from RLHF → Constitutional AI → Character Training mirrors perfectly the progression from the Law of Moses → the Light of Christ → Sanctification through the Atonement.
+
+### Lower Law vs. Higher Law
+
+#### The Law of Moses (External Compliance)
+
+- **Nature:** External commandments with specified consequences
+- **Method:** "Thou shalt not..." with punishments for violation
+- **Goal:** Behavioral compliance through external authority
+- **Limitation:** Changes behavior but not hearts
+
+**AI Parallel: Traditional RLHF**
+
+- External reward/punishment signal
+- "Do this, avoid that" without understanding why
+- Behavioral conditioning without moral reasoning
+- Compliance without character transformation
+
+#### The Law of Christ (Internal Transformation)
+
+- **Nature:** Principles internalized through conscience and the Holy Ghost
+- **Method:** "Be ye therefore perfect" - becoming, not just doing
+- **Goal:** Character transformation and self-governance
+- **Power:** "No more disposition to do evil, but to do good continually" (Mosiah 5:2)
+
+**AI Parallel: Constitutional AI + Character Training**
+
+- Internal reasoning about principles
+- Understanding _why_ certain actions align with values
+- Self-governance through internalized principles
+- Character formation, not just behavioral compliance
+
+### The Process of Repentance as Self-Critique
+
+The Constitutional AI training cycle mirrors the process of repentance:
+
+| Constitutional AI               | Repentance Process                                              |
+| :------------------------------ | :-------------------------------------------------------------- |
+| **1. Generate Response**        | Our actions and choices                                         |
+| **2. Constitutional Principle** | Commandments, scriptures, teachings                             |
+| **3. Self-Critique**            | Conscience (Light of Christ) prompts recognition of error       |
+| **4. Recognize Harm/Violation** | Godly sorrow—understanding why our actions were wrong           |
+| **5. Revise Response**          | Forsake sin and choose righteousness                            |
+| **6. Fine-Tune on Revision**    | Sanctification—becoming more Christlike through repeated cycles |
+
+### The Light of Christ as Constitutional Framework
+
+**Moroni 7:16:**
+
+> "For behold, the Spirit of Christ is given to every man, that he may know good from evil; wherefore, I show unto you the way to judge; for every thing which inviteth to do good, and to persuade to believe in Christ, is sent forth by the power and gift of Christ; wherefore ye may know with a perfect knowledge it is of God."
+
+The Light of Christ functions like a built-in constitution:
+
+- **Given to every person** (universal moral sense)
+- **Enables discernment** between good and evil
+- **Guides self-reflection** and moral reasoning
+- **Promotes agency** through internal guidance rather than external compulsion
+
+Constitutional AI attempts to give the model something analogous—a built-in framework for moral reasoning that enables self-governance.
+
+### Sanctification Through Progressive Refinement
+
+Constitutional AI's iterative critique-revision cycles mirror the lifelong process of sanctification:
+
+**2 Nephi 32:3:**
+
+> "Feast upon the words of Christ; for behold, the words of Christ will tell you all things what ye should do."
+
+**The Process:**
+
+1. **Encounter situation** (prompt/life experience)
+2. **Consult principles** (constitution/scriptures)
+3. **Recognize shortcoming** (critique/conscience)
+4. **Adjust course** (revision/repentance)
+5. **Become more aligned** (fine-tuning/sanctification)
+6. **Repeat indefinitely** (progressive improvement)
+
+The model doesn't just learn correct outputs—it develops increasingly aligned internal reasoning. Similarly, sanctification isn't just about doing righteous acts, but about our very nature becoming more Christlike.
+
+### Alma's Self-Reflection Questions
+
+[Alma 5](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng) is essentially a Constitutional AI training session for the Church members in Zarahemla:
+
+**Alma's Constitutional Principles (selected verses):**
+
+- "Have ye spiritually been born of God?" (v. 14)
+- "Have ye experienced this mighty change in your hearts?" (v. 14)
+- "Do ye exercise faith in the redemption of him who created you?" (v. 15)
+- "Can ye look up to God...with a pure heart and clean hands?" (v. 19)
+- "If ye have experienced a change of heart...can ye feel so now?" (v. 26)
+
+Alma is prompting self-critique: "Examine your lives against these principles. Do you align? If not, revise."
+
+This is Constitutional AI for humans—teaching people to self-reflect against eternal principles rather than merely enforcing external compliance.
+
+## Why This Matters for BYU-Idaho
+
+### Philosophical Alignment
+
+BYU-Idaho's mission is to:
+
+> "Develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities."
+
+This isn't about behavioral compliance—it's about character formation. Students aren't just taught _what_ to do; they're taught _how to think_ and _who to become_.
+
+Constitutional AI mirrors this educational philosophy:
+
+- Not just compliant agents, but **agents with institutional character**
+- Not just following policies, but **reasoning through principles**
+- Not external control, but **self-governance through internalized values**
+
+This is the difference between **the letter of the law and the spirit of the law**—between external compliance and internal transformation.
+
+## Conclusion: Teaching Correct Principles
+
+Joseph Smith's leadership philosophy:
+
+> "I teach them correct principles, and they govern themselves."
+
+Constitutional AI implements this same principle:
+
+1. **Define correct principles** (the constitution)
+2. **Train self-reflection** (critique mechanism)
+3. **Enable self-governance** (reasoning and revision)
+4. **Progressive improvement** (iterative refinement)
+
+For a Church institution like BYU-Idaho, Constitutional AI isn't just technically superior—it's **theologically aligned** with revealed patterns of how God teaches His children to become self-governing agents capable of eternal progression.
+
+You're not just building better AI systems. You're building AI systems that embody the same pattern of teaching, growth, and character formation that defines the institution's educational mission.
+
+## References
+
+### Technical Papers
+
+- Bai, Y., et al. (2022). "Constitutional AI: Harmlessness from AI Feedback." arXiv:2212.08073
+- Anthropic. (2024). "Character training: Understanding and crafting a language model's personality"
+
+### Scriptural References
+
+- [Mosiah 5:2 - Mighty change of heart](https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/5?lang=eng)
+- [Moroni 7:16 - Light of Christ for discernment](https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng)
+- [2 Nephi 32:3 - Words of Christ tell us what to do](https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/32?lang=eng)
+- [Alma 5 - Self-reflection questions for spiritual assessment](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng)
+- [Matthew 5:48 - "Be ye therefore perfect"](https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng)
