@@ -105,7 +105,7 @@
     "href": "https://www.byui.edu"
   },
   "appearance": {
-    "default": "light",
+    "default": "system",
     "strict": false
   },
   "navbar": {
@@ -136,5 +136,11 @@
   },
   "contextual": {
     "options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp"]
+  },
+  "thumbnails": {
+    "appearance": "dark"
+  },
+  "styling": {
+    "eyebrows": "section"
   }
 }
