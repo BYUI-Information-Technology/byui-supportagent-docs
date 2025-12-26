@@ -15,7 +15,89 @@ sidebarTitle: "Release Notes"
   | **Patch**        | v1.7.0 → v1.7.1 | Bug fixes, Security patches, Performance tweaks, Minor text/UI adjustments                                                                                          |
 </Accordion>
 
-<Update label="December 10, 2025" tags={["Features""]}>
+<Update label="December 26, 2025" tags={["Features", "Improvements", "Bug-Fixes", "Performance", "Security"]}>
+## Version 1.1.0 - Minor Release
+### What's New
+
+Post-launch improvements focused on three key areas: smarter live agent handoff that remembers your login information, dramatically faster response times (from 8+ seconds to under 1 second), and new campus integration tools. This release also includes critical security patches and establishes proper release management processes for future updates.
+
+### Features
+
+**Live Agent Handoff Improvements**
+
+- Auto-populate your name and email from login session—no more redundant questions when connecting to a live agent
+- Campus directory lookup tool for searching BYU-Idaho contacts and departments
+- Holiday hours mode for configurable business hours (M-F 8 AM - 5 PM during holidays vs normal operating hours)
+
+**User Experience**
+
+- Browser notifications for unread messages while browsing other tabs
+- Interactive onboarding tutorial for new users
+- Role-based quick actions tailored to your user type (student, employee)
+- Loading indicators during AI response generation
+
+### Improvements
+
+**Live Agent Handoff**
+
+- Enhanced WebSocket connection stability and timeout prevention
+- Improved session persistence with Redis-based tracking
+- Better correlation ID handling for handoff state management
+- Enhanced SSE keepalive with heartbeat yielding to prevent disconnections
+
+**Frontend**
+
+- Code splitting and lazy loading for faster initial page loads
+- Enhanced source display showing citations for tool executions
+- Better error messages across all agent interactions
+
+### Bug Fixes
+
+**Live Agent Handoff**
+
+- Fixed issue where agent repeatedly asked for name and email despite having this information from your login profile
+- Resolved session persistence problems during handoff
+- Fixed WebSocket resource leaks
+- Corrected handoff detection tool naming
+
+**UI & Display**
+
+- Resolved message duplication in chat interface
+- Fixed duplicate tool cards appearing in responses
+- Corrected TypeScript strict mode errors
+- Updated chat placeholders and hover states for better clarity
+
+### Performance
+
+- **Sub-second response times**: Switched to SQLAlchemySession, reducing response time from 8-11 seconds to under 1 second
+- **Faster startup**: Removed bottlenecks at application startup
+- **Improved frontend loading**: Code splitting and lazy loading reduce initial page load time
+
+### Security
+
+**Critical Updates**
+
+- React 19.2.1 upgrade (CVE-2025-55182 Critical RCE fix)
+- mdast-util-to-hast 13.2.1 (CVE-2025-66400 fix)
+- Multiple dependency security updates
+
+**Enhancements**
+
+- Improved FERPA and academic integrity guardrails
+
+### Technical
+
+**Documentation**
+
+- CHANGELOG.md with complete release history
+- Release management documentation
+- Deployment rollback procedures
+- ACR cleanup documentation
+
+**ACR Image Tags**: `v1.1.0`
+</Update>
+
+<Update label="December 10, 2025" tags={["Initial-Release"]}>
 
 ## Version 1.0.0 - Production Release
 
