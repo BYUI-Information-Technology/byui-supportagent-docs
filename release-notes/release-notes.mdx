@@ -1,205 +1,190 @@
 ---
-title: Release Notes
-description: Product updates, new features, and improvements for the BYU-Idaho Support Agent platform.
-rss: true
+title: "Release Notes"
+description: "Find information relating to platform updates, new features, and improvements for the BYU-Idaho Support Agent platform."
+rss: "true"
+sidebarTitle: "Release Notes"
 ---
 
+<Accordion title="Versioning Process" description="Definitions and standards" icon="git-pull-request-arrow">
+  The BYU-Idaho Support Agent platform uses a versioning system where each release increments sequentially (for example 1.9.0 → 1.10.0 → 2.0.0). All version numbers follow the format`MAJOR.MINOR.PATCH`. See the table below:
+
+  | **Version Type** | **Example**     | **Changes**                                                                                                                                                         |
+  | ---------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | **Major**        | v1 → v2         | Complete UI redesign, Major architectural changes, Significant new capabilities (e.g., adding voice agents), Strategic milestones (e.g., "Phase 2" of the platform) |
+  | **Minor**        | v1.6 → v1.7     | New features, New integrations, Notable improvements                                                                                                                |
+  | **Patch**        | v1.7.0 → v1.7.1 | Bug fixes, Security patches, Performance tweaks, Minor text/UI adjustments                                                                                          |
+</Accordion>
+
 <Update label="December 22, 2025" tags={["Bug Fixes", "Critical"]} rss={{ title: "Live Agent Handoff Fully Restored" }}>
+  ## Live Agent Handoff Fixed
 
-## Live Agent Handoff Fixed
+  **What Was Broken**
 
-**What Was Broken**
+  The BSC reported that users were unable to connect to live support representatives through the Support Agent. When requesting to speak with a human agent, the connection process would fail, preventing access to the BYUI Support Center team.
 
-The BSC reported that users were unable to connect to live support representatives through the Support Agent. When requesting to speak with a human agent, the connection process would fail, preventing access to the BYUI Support Center team.
+  **Root Cause**
 
-**Root Cause**
+  During a system update, we modernized the handoff process to support richer context sharing with live agents. While the core functionality was updated, references in the agent's instructions and connection detection logic were missed, breaking the handoff chain.
 
-During a system update, we modernized the handoff process to support richer context sharing with live agents. While the core functionality was updated, references in the agent's instructions and connection detection logic were missed, breaking the handoff chain.
+  **What We Fixed**
 
-**What We Fixed**
+  - Updated the AI agent's instructions to use the correct handoff procedure with enhanced parameters
+  - Fixed the system's ability to detect successful handoff attempts and trigger the Genesys bridge
+  - Removed outdated configuration files to prevent future confusion
 
-* Updated the AI agent's instructions to use the correct handoff procedure with enhanced parameters
-* Fixed the system's ability to detect successful handoff attempts and trigger the Genesys bridge
-* Removed outdated configuration files to prevent future confusion
+  **Verification**
 
-**Verification**
+  The fix has been tested and confirmed working in production. Users can now successfully connect to live support representatives during business hours.
 
-The fix has been tested and confirmed working in production. Users can now successfully connect to live support representatives during business hours.
+  **User Impact**
 
-**User Impact**
+  You can now:
 
-You can now:
+  - Request to speak with a live agent at any time during business hours (currently holiday hours)
+  - Be seamlessly connected to the BYUI Support Center team via chat
+  - Continue your conversation with a real person when you need additional assistance
 
-* Request to speak with a live agent at any time during business hours (currently holiday hours)
-* Be seamlessly connected to the BYUI Support Center team via chat
-* Continue your conversation with a real person when you need additional assistance
+  **Technical Details**
 
-**Technical Details**
-
-* Backend Version: `latest-main-20251222-093004`
-* Files Updated: `prompt.py`, `api.py`
-* Commits: 94421d2, 7709f41, 577eb28, 9dd818d
-
+  - Backend Version: `latest-main-20251222-093004`
+  - Files Updated: `prompt.py`, `api.py`
+  - Commits: 94421d2, 7709f41, 577eb28, 9dd818d
 </Update>
 
-<Update label="December 15, 2025" description="v1.5.0 - Version Update" tags={["New Features", "Security", "Improvements"]} rss={{ title: "Dynamic Quick Actions, CORS Security Enhancements, and Reasoning UI Features" }}>
+<Update label="December 15, 2025" tags={["New Features", "Security", "Improvements"]} description="v1.5.0 - Version Update" rss={{ title: "Dynamic Quick Actions, CORS Security Enhancements, and Reasoning UI Features" }}>
+  ## Dynamic Quick Actions Feature
 
-## Dynamic Quick Actions Feature
+  - Implemented dynamic quick action prompts that change based on user type (student vs employee).
+  - Personalized and contextually relevant suggested prompts for better user experience.
+  - Role-specific guidance improves discoverability and engagement.
 
-- Implemented dynamic quick action prompts that change based on user type (student vs employee).
-- Personalized and contextually relevant suggested prompts for better user experience.
-- Role-specific guidance improves discoverability and engagement.
+  ## CORS Security Enhancements
 
-## CORS Security Enhancements
+  - Under the hood enhancements that auto-detect testing environment to dynamically update CORS
 
-- Under the hood enhancements that auto-detect testing environment to dynamically update CORS
+  ## Reasoning UI Features
 
-## Reasoning UI Features
-
-- Enhanced user interface for displaying AI thinking processes and reasoning.
-- Improved tool execution visualization with source attribution.
-- Upgraded to GPT-5.2 model with medium reasoning effort for better responses.
-- Added skeleton loading states for improved user experience during processing.
-
+  - Enhanced user interface for displaying AI thinking processes and reasoning.
+  - Improved tool execution visualization with source attribution.
+  - Upgraded to GPT-5.2 model with medium reasoning effort for better responses.
+  - Added skeleton loading states for improved user experience during processing.
 </Update>
 
 <Update label="December 13, 2025" tags={["Analytics", "New Features"]} rss={{ title: "Microsoft Clarity Analytics Integration" }}>
+  ## Microsoft Clarity Analytics Integration
 
-## Microsoft Clarity Analytics Integration
-
-- Added Microsoft Clarity analytics to production environment.
-- Enables comprehensive user behavior tracking and session recordings.
-- Heatmaps and geolocation data provide insights into user interactions.
-- Project ID: ul58fwveg2 for tracking and analysis.
-
+  - Added Microsoft Clarity analytics to production environment.
+  - Enables comprehensive user behavior tracking and session recordings.
+  - Heatmaps and geolocation data provide insights into user interactions.
+  - Project ID: ul58fwveg2 for tracking and analysis.
 </Update>
 
 <Update label="December 9, 2025" tags={["Bug Fixes", "Improvements"]} rss={{ title: "Genesys WebSocket Connection Timeout Fix" }}>
+  ## Live Agent Handoff Improvements
 
-## Live Agent Handoff Improvements
-
-- Resolved premature WebSocket connection drops during live agent handoffs.
-- Implemented SSE keepalive events with 30-second intervals to maintain connection.
-- Reduced WebSocket ping interval from 20s to 15s for faster health checks.
-- Added comprehensive connection health monitoring and logging for better diagnostics.
-
+  - Resolved premature WebSocket connection drops during live agent handoffs.
+  - Implemented SSE keepalive events with 30-second intervals to maintain connection.
+  - Reduced WebSocket ping interval from 20s to 15s for faster health checks.
+  - Added comprehensive connection health monitoring and logging for better diagnostics.
 </Update>
 
 <Update label="December 5, 2025" tags={["Improvements", "Bug Fixes"]} rss={{ title: "WebSearch Result Improvements and TypeScript Fixes" }}>
+  ## Production Deployment Updates
 
-## Production Deployment Updates
-
-- Deployed backend and frontend with WebSearch result improvements for more accurate responses.
-- Fixed TypeScript compilation errors by adding missing properties.
-- Verified all services running and healthy at supportagent.byui.edu.
-
+  - Deployed backend and frontend with WebSearch result improvements for more accurate responses.
+  - Fixed TypeScript compilation errors by adding missing properties.
+  - Verified all services running and healthy at supportagent.byui.edu.
 </Update>
 
 <Update label="December 4, 2025" tags={["Improvements", "Bug Fixes"]} rss={{ title: "UI Improvements, Session Persistence, and Error Handler Implementation" }}>
+  ## UI Improvements & Session Persistence
 
-## UI Improvements & Session Persistence
+  - Fixed chat history gaps when users refresh the page for seamless conversation continuity.
+  - Replaced hardcoded business hours with dynamic environment variables for easier maintenance.
+  - Standardized chat message font sizes across all message types (text-sm/14px).
+  - Implemented handoff disconnect UI with blue branded banner for clear status indication.
+  - Added explicit SQLAlchemy session commits for improved PostgreSQL persistence.
 
-- Fixed chat history gaps when users refresh the page for seamless conversation continuity.
-- Replaced hardcoded business hours with dynamic environment variables for easier maintenance.
-- Standardized chat message font sizes across all message types (text-sm/14px).
-- Implemented handoff disconnect UI with blue branded banner for clear status indication.
-- Added explicit SQLAlchemy session commits for improved PostgreSQL persistence.
+  ## Error Handler Implementation
 
-## Error Handler Implementation
-
-- Added failure_error_function to all 6 agent tools for robust error handling.
-- Provides user-friendly fallback messages for uncaught exceptions.
-- Updated tools: search_knowledge_base, academic_calendar, lookup_portals_and_resources, research_ai_tools, create_ticket, and web_search.
-
+  - Added failure_error_function to all 6 agent tools for robust error handling.
+  - Provides user-friendly fallback messages for uncaught exceptions.
+  - Updated tools: search_knowledge_base, academic_calendar, lookup_portals_and_resources, research_ai_tools, create_ticket, and web_search.
 </Update>
 
 <Update label="December 3, 2025" tags={["New Features", "Improvements"]} rss={{ title: "Redis-Backed Handoff Tracking and Key Vault Performance Optimization" }}>
+  ## Redis-Backed Handoff Completion Tracking
 
-## Redis-Backed Handoff Completion Tracking
+  - Implemented Redis-backed session metadata storage with 72-hour TTL.
+  - Added correlation ID capture from first message response for tracking.
+  - Created POST /api/chat/handoff/session_id/complete endpoint for handoff management.
+  - Integrated AI agent context injection when users return from completed live agent handoffs.
+  - Added Azure Cache for Redis (Standard C1, 1GB) to infrastructure.
 
-- Implemented Redis-backed session metadata storage with 72-hour TTL.
-- Added correlation ID capture from first message response for tracking.
-- Created POST /api/chat/handoff/{session_id}/complete endpoint for handoff management.
-- Integrated AI agent context injection when users return from completed live agent handoffs.
-- Added Azure Cache for Redis (Standard C1, 1GB) to infrastructure.
+  ## Azure Key Vault Performance Optimization
 
-## Azure Key Vault Performance Optimization
-
-- Eliminated Key Vault bottleneck by loading all secrets at startup.
-- Reduced from 51+ runtime requests to 1 batch load for significant performance improvement.
-- Improved performance by caching 21 secrets in environment variables.
-- Backward compatible with .env file fallback for local development.
-
+  - Eliminated Key Vault bottleneck by loading all secrets at startup.
+  - Reduced from 51+ runtime requests to 1 batch load for significant performance improvement.
+  - Improved performance by caching 21 secrets in environment variables.
+  - Backward compatible with .env file fallback for local development.
 </Update>
 
 <Update label="December 1, 2025" tags={["Infrastructure", "Improvements"]} rss={{ title: "Production Scaling Configuration" }}>
+  ## Horizontal Auto-Scaling
 
-## Horizontal Auto-Scaling
-
-- Configured horizontal auto-scaling for both backend and frontend containers.
-- Backend: minimum 2 replicas, maximum 10 (previously 1) for high availability.
-- Frontend: minimum 2 replicas, maximum 10 (previously 1-3) for improved load handling.
-- HTTP-based scaling at 75 concurrent requests per backend replica.
-- Eliminated single points of failure for production launch readiness.
-
+  - Configured horizontal auto-scaling for both backend and frontend containers.
+  - Backend: minimum 2 replicas, maximum 10 (previously 1) for high availability.
+  - Frontend: minimum 2 replicas, maximum 10 (previously 1-3) for improved load handling.
+  - HTTP-based scaling at 75 concurrent requests per backend replica.
+  - Eliminated single points of failure for production launch readiness.
 </Update>
 
 <Update label="November 24, 2025" tags={["New Features"]} rss={{ title: "Frontend-Based Conversation Persistence" }}>
+  ## Conversation Persistence
 
-## Conversation Persistence
-
-- Enabled users to maintain chat history across page refreshes.
-- Frontend now stores and resumes OpenAI conversation IDs for seamless experience.
-- All 11 backend and 4 frontend tests passed.
-- Deployed to both development and production environments.
-
+  - Enabled users to maintain chat history across page refreshes.
+  - Frontend now stores and resumes OpenAI conversation IDs for seamless experience.
+  - All 11 backend and 4 frontend tests passed.
+  - Deployed to both development and production environments.
 </Update>
 
 <Update label="November 21, 2025" tags={["New Features", "Improvements"]} rss={{ title: "Genesys Live Agent Handoff Enhancement" }}>
+  ## Live Agent Handoff Updates
 
-## Live Agent Handoff Updates
+  - Updated to official WebSocket Guest API with proper guest session flow.
+  - Enhanced metadata tracking with journeyContext for improved customer tracking.
+  - Added rich context attributes for AI-initiated handoffs to provide agents with conversation history.
+  - Moved custom attributes from memberInfo to message.metadata.customAttributes for better organization.
 
-- Updated to official WebSocket Guest API with proper guest session flow.
-- Enhanced metadata tracking with journeyContext for improved customer tracking.
-- Added rich context attributes for AI-initiated handoffs to provide agents with conversation history.
-- Moved custom attributes from memberInfo to message.metadata.customAttributes for better organization.
+  ## Multiple Development & Production Deployments
 
-## Multiple Development & Production Deployments
-
-- Deployed handoff message functionality for live agent sessions.
-- Fixed dynamic business hours configuration for accurate availability display.
-- Updated business hours from hardcoded values to dynamic environment variables.
-
+  - Deployed handoff message functionality for live agent sessions.
+  - Fixed dynamic business hours configuration for accurate availability display.
+  - Updated business hours from hardcoded values to dynamic environment variables.
 </Update>
 
 <Update label="November 20, 2025" tags={["New Features", "Bug Fixes"]} rss={{ title: "Production Deployment with Genesys Live Agent Handoff" }}>
+  ## Genesys Live Agent Handoff
 
-## Genesys Live Agent Handoff
-
-- Successfully deployed Genesys live agent handoff functionality to production.
-- Seamless transition from AI agent to human support agents when needed.
-- Updated business hours from hardcoded to dynamic environment variables.
-- Fixed discrepancy where agent reported 7AM-5PM instead of 7AM-10PM MT.
-
+  - Successfully deployed Genesys live agent handoff functionality to production.
+  - Seamless transition from AI agent to human support agents when needed.
+  - Updated business hours from hardcoded to dynamic environment variables.
+  - Fixed discrepancy where agent reported 7AM-5PM instead of 7AM-10PM MT.
 </Update>
 
 <Update label="November 11, 2025" tags={["New Release"]} rss={{ title: "Initial Production Deployment to Azure Container Apps" }}>
+  ## Production Launch
 
-## Production Launch
-
-- First production deployment to Azure Container Apps.
-- Removed unused highlight.js imports and Vite configuration for cleaner codebase.
-- Frontend and backend successfully deployed with ACR build.
-- Production environment available at https://supportagent.byui.edu.
-
+  - First production deployment to Azure Container Apps.
+  - Removed unused highlight.js imports and Vite configuration for cleaner codebase.
+  - Frontend and backend successfully deployed with ACR build.
+  - Production environment available at https://supportagent.byui.edu.
 </Update>
 
-<Update label="September 9, 2025" description="v1.0.0 - Initial Release" tags={["Features", "Initial-Release", "Documentation"]}>
+<Update label="September 9, 2025" tags={["Features", "Initial-Release", "Documentation"]} description="v1.0.0 - Initial Release">
+  ## First Release
 
-## First Release
+  This is the initial release of the BYU-Idaho Support Agent. It is a beta release available to students, employees, and visitors to BYU-Idaho for a limited time. This release features the chat and voice chat interfaces, a visually appealing home page, and a comprehensive documentation website.
 
-This is the initial release of the BYU-Idaho Support Agent. It is a beta release available to students, employees, and visitors to BYU-Idaho for a limited time. This release features the chat and voice chat interfaces, a visually appealing home page, and a comprehensive documentation website.
-
-This release was a collaborative effort between the BYU-Idaho Information Technology team and the BYU-Idaho Support Center. The Support Center provided feedback and testing for this release.
-
+  This release was a collaborative effort between the BYU-Idaho Information Technology team and the BYU-Idaho Support Center. The Support Center provided feedback and testing for this release.
 </Update>
