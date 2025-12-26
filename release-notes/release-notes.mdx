@@ -15,8 +15,23 @@ sidebarTitle: "Release Notes"
   | **Patch**        | v1.7.0 → v1.7.1 | Bug fixes, Security patches, Performance tweaks, Minor text/UI adjustments                                                                                          |
 </Accordion>
 
-<Update label="December 22, 2025" tags={["Bug Fixes", "Critical"]} rss={{ title: "Live Agent Handoff Fully Restored" }}>
-  ## Live Agent Handoff Fixed
+<Update label="December 26, 2025" tags={["Features", "Improvements"]}>
+
+## Version 1.7.0 - Minor Update 
+
+- **Smart Handoff**: Live agent handoff now auto-populates user information from authenticated sessions, reducing friction during escalations
+- **Improved Release and Version Management**: Integrated CI/CD pipeline with release and version management for proper semantic versioning and container registry management
+- **Rollback Controls**: Added new rollback controls for reverting to previous container image versions (tagged in ACR with version)
+- **Changelog**: Enhanced change and version logging for internal developer documentation
+
+**Technical Details**
+
+ACR Image Tags: `v1.7.0`
+
+</Update>
+
+<Update label="December 22, 2025" tags={["Bug Fixes", "Critical"]} rss={{ title: "Version 1.6.1" }}>
+  ## Version 1.6.1
 
   **What Was Broken**
 
@@ -44,11 +59,6 @@ sidebarTitle: "Release Notes"
   - Be seamlessly connected to the BYUI Support Center team via chat
   - Continue your conversation with a real person when you need additional assistance
 
-  **Technical Details**
-
-  - Backend Version: `latest-main-20251222-093004`
-  - Files Updated: `prompt.py`, `api.py`
-  - Commits: 94421d2, 7709f41, 577eb28, 9dd818d
 </Update>
 
 <Update label="December 15, 2025" tags={["New Features", "Security", "Improvements"]} description="v1.5.0 - Version Update" rss={{ title: "Dynamic Quick Actions, CORS Security Enhancements, and Reasoning UI Features" }}>
