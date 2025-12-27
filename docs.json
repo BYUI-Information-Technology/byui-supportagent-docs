@@ -22,7 +22,8 @@
             "group": "Getting Started",
             "pages": [
               "getting-started/overview",
-              "getting-started/quickstart"
+              "getting-started/quickstart",
+              "getting-started/about-this-site"
             ]
           }
         ]
