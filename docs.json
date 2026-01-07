@@ -155,5 +155,8 @@
   },
   "icons": {
     "library": "lucide"
+  },
+  "background": {
+    "decoration": "gradient"
   }
 }
