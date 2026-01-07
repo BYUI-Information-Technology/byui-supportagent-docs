@@ -1,0 +1,54 @@
+---
+title: "Main Features"
+description: "Learn about the main features of the Support Agent and how it works."
+sidebarTitle: "Main Features"
+---
+
+## Tools
+
+A key difference between a vanilla "chatbot" and an "AI Agent" lies in the orchestration of tools.
+
+Think of an AI agent as a very capable assistant. On its own, it can think, reason, and talk. **Tools** are the things it can _use_ to actually get stuff done in the real world.
+
+A helpful metaphor is a human at a desk.
+
+Your brain is great at planning, deciding, and explaining. But when you need to send an email, check a calendar, look up a file, or calculate a budget, you reach for tools. A keyboard, a browser, a calculator, a phone. Without them, you would be stuck thinking about work instead of doing it. AI agent tools work the same way.
+
+A tool is simply **a permissioned action the AI can take outside its own head**. Instead of just answering using generic knowledge, the agent can:
+
+- Look something up
+- Send messages
+- Update records
+- Trigger workflows
+- Call other software systems
+
+The key idea is this: **tools turn the AI from a chatbot into an autonomous "AI agent"**. Without tools, an AI can say, "Here’s how you should do this." With tools, it can say, "I’ve done it."
+
+Importantly, tools are not magical or autonomous. They are tightly defined. Each tool says, in effect, “You may do this one specific thing.” The agent chooses whether to use a tool, when to use it, and how, but it cannot go beyond what the tool allows. That keeps things safe and predictable.
+
+Here is a concrete, everyday example.
+
+If you ask the Support Agent, “How do I get a parking pass?,” the thinking part figures out the intent. The tool is what the agent uses to find an answer, and provide the correct information. No  tool, no correct information, just general knowledge.
+
+So when people talk about AI agents using tools, they are really talking about **bridging the gap between intelligence and action**. Tools are the bridge.
+
+Once you see tools this way, the whole agent idea becomes less mysterious. It is just reasoning plus well-defined abilities, working together to provide a functional, effective system.
+
+### Tools Used by the BYUI Support Agent
+
+The BYUI Support Agent uses the tools defined in the table below:
+
+| **Tool**               | **Purpose**                                                                                                                                                                                                                                            | **Example**                                                      | **Without Tool**                                                                                                                                                                                                                                            | **With Tool**                                                                                                                                                                |
+| ---------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Search Knowledge Base  | Searches a [specialized knowledge base](/learn/rag/vector-databases) for BYU-Idaho policies and procedures. This tool gives the LLM the "knowledge" it uses to answer questions through [Retrieval Augmented Generation (RAG)](/learn/rag/what-is-rag) | What scholarships are available?                                 | \_There are academic, merit-based, need-based, athletic, identity/demographic, major-specific, and local scholarships, plus specific programs like Voice of Democracy and Gates Millennium. Explore school and community offers! \_                         | _BYU‑Idaho offers merit, returned‑missionary, academic, need‑based, talent, and state scholarships for domestic students._                                                   |
+| Academic Calendar      | Fetches all of the important dates and deadlines from the university calendar.                                                                                                                                                                         | When does 2nd block start?                                       | _Which schedule are you referring to (school, class, conference, or work shift), and what location or timezone?_                                                                                                                                            | _Second Block for Winter 2026 begins on February 23, 2026. If you need help finding other deadlines—like add/drop dates or payment deadlines—I'd be happy to help!_          |
+| Lookup Portal and Urls | Performs a simple lookup or verification against a list of verified urls for important resources like Canvas, myBYUI, Grad Planner, etc.. Without this the AI agent may hallucinate links when a user asks, "How do I login to I-Learn?".              | What's the right website for I-Learn?                            | [_For BYU-Idaho I-Learn (Canvas), go to https://my.byui.edu and log in with your BYU-Idaho credentials — then access Canvas/I-Learn from there. (my.byui.edu)_](https://my.byui.edu)  _If you meant a different “I-Learn” (like IPEM school), let me know!_ | [_I‑Learn is BYU‑Idaho’s Canvas. Use: https://byui.instructure.com/. If you can’t log in, try opening it from your myBYUI (Student Portal)._](https://byui.instructure.com/) |
+| Campus Directory       | Look up department phone numbers and locations                                                                                                                                                                                                         | What is the phone number for the department of Computer Science? | _Here’s the department of Computer Science phone number:_  _(701) 231-8562 – Main office for the Computer Science Department at BYU-Idaho._  _Let me know if you want a specific university’s contact!_                                                     | _Computer Science & Electrical Engineering: 208-496-7600. If you need a specific professor, tell me the name and I’ll help you find the right contact._                      |
+| Live Agent Handoff     | Connect users to human support agents                                                                                                                                                                                                                  | _I want to talk with a human, not an AI._                        | _I get that. I’m an AI, not a human—but I’m here to listen and help however I can. What’s on your mind?_                                                                                                                                                    | \_Not a problem! Let me connect you with a member of the BYU-Idaho Support Center. \_                                                                                        |
+| Web Search             | Search the web for general information                                                                                                                                                                                                                 | _What's the weather supposed to be like tomorrow?_               | I don’t know your location, and I can’t check live weather without searching.                                                                                                                                                                               | Tomorrow (Thu, Jan 8): Mostly cloudy around 31–37°F, with rain in the afternoon/evening and possible snow late.                                                              |
+
+## Knowledge
+
+## Learning Pipeline
+
+## Feedback

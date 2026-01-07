@@ -74,6 +74,7 @@
           {
             "group": "Technical Documentation",
             "pages": [
+              "technical/technical-documentation/main-features",
               "technical/chat-widget",
               "technical/agent-example",
               "technical/specifications"

@@ -15,6 +15,58 @@ sidebarTitle: "Release Notes"
   | **Patch**        | v1.7.0 → v1.7.1 | Bug fixes, Security patches, Performance tweaks, Minor text/UI adjustments                                                                                          |
 </Accordion>
 
+<Update label="December 30, 2025" tags={["Features", "Improvements"]}>
+## Version 1.2.0 - Minor Release
+
+## What's New
+
+This release brings significant accessibility improvements, enhanced user onboarding, and refined interface design. The Support Agent includes improvements for WCAG Level A accessibility standards, making it more usable for all students, faculty, and staff. We've also updated and simplified the onboarding tutorial to help new users get started quickly, improved visual consistency with official BYU-Idaho brand colors, and enhanced the chat UI with small UI/UX tweaks.
+
+## Features
+
+**Accessibility Enhancements**
+
+- Implemented accessibility features across the entire application, making the Support Agent more accessible to all users
+- Added screen reader support with proper labels for all form inputs and buttons
+- Added semantic HTML landmarks for improved navigation with assistive technologies
+- Implemented live status announcements for handoff updates, ensuring screen reader users stay informed
+
+**User Onboarding**
+
+- Enhanced the interactive tutorial for new users with step-by-step guidance on key features
+- Included visual icons and clear instructions for saving responses and leaving feedback
+
+## Improvements
+
+**User Interface & Design**
+
+- Updated application with official BYU-Idaho brand colors for a more cohesive university experience
+- Refined dark mode styling across all components for better readability and consistency
+- Streamlined chat input area with cleaner, more modern design
+- Enhanced dropdown menus with tutorial and about options for easier access to help
+- Improved modal and dialog components with better visual integration
+
+**AI Reasoning Display**
+
+- Enhanced reasoning indicators showing clearer explanations of the AI's thought process
+- Improved formatting and readability of reasoning messages
+
+**Tool Execution & Display**
+
+- Fixed tool name extraction for MCP and hosted tools—WebSearchTool and other MCP tools now display correctly instead of showing as 'unknown_tool'
+- Enhanced tool name fallback mechanism to check multiple attribute paths for more reliable tool identification
+- Improved source display in tool execution cards, clearly showing the number of sources available
+
+**Documentation & Citations**
+
+- Updated citation guidelines to emphasize natural inline mentions without URLs
+- Clarified tool usage instructions in agent prompt, particularly for web search and documentation tools
+
+## Technical Notes
+**Updated CHANGELOG** Reflects commits for all revisions included in this release
+**ACR Image Tags**: `v1.2.0`
+</Update>
+
 <Update label="December 26, 2025" tags={["Features", "Improvements", "Bug-Fixes", "Performance", "Security"]}>
 ## Version 1.1.0 - Minor Release
 ### What's New
