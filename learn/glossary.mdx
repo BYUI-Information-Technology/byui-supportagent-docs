@@ -1,0 +1,47 @@
+---
+title: "Glossary"
+description: "This is a glossary of terms commonly used in Artificial Intelligence"
+sidebarTitle: "Glossary"
+mode: "wide"
+---
+
+- **Artificial Intelligence (AI)**: A broad field of computer science focused on building systems that perform tasks typically requiring human intelligence, such as perception, reasoning, learning, planning, and language understanding.
+- **Machine Learning (ML)**: A subset of AI where models learn patterns from data to make predictions or decisions, improving performance on a task without being explicitly programmed with fixed rules.
+- **Deep Learning**: A subset of ML that uses multi-layer neural networks to learn hierarchical representations, often excelling in vision, speech, and natural language tasks.
+- **Neural Network**: A computational model composed of interconnected “neurons” (parameters organized in layers) that transforms inputs into outputs through learned weights, enabling pattern recognition and function approximation.
+- **Large Language Model (LLM)**: A neural network trained on large-scale text (and sometimes code) to predict and generate language, enabling capabilities like summarization, question answering, translation, and reasoning-like behaviors.
+- **Foundation Model**: A large, broadly trained model that can be adapted to many downstream tasks via prompting, fine-tuning, or tool use, serving as a general-purpose base for multiple applications.
+- **Frontier Model**: A state-of-the-art foundation model at the leading edge of capability, typically large, expensive to train, and evaluated against advanced benchmarks for reasoning, coding, multimodal understanding, and safety.
+- **Generative AI**: AI systems that create new content such as text, images, audio, video, or code by learning the underlying structure of training data and sampling plausible outputs.
+- **Prompt**: The input instructions and context provided to a model to steer its output, including system constraints, user requests, examples, and retrieved or tool-produced context.
+- **Prompt Engineering**: The practice of designing prompts (structure, instructions, examples, constraints) to reliably elicit desired behavior from a model without changing model weights.
+- **Context Window**: The maximum amount of input (tokens) a model can attend to at once, which bounds how much conversation history, documents, and instructions can be included in a single inference.
+- **Token**: A unit of text used by models (often subwords or character groups) that determines how input and output length are measured and billed, and affects context window usage.
+- **Embedding**: A dense numerical vector representation of content (text, images, etc.) that captures semantic meaning, enabling similarity search, clustering, and retrieval.
+- **Vector Database (Vector Store)**: A storage system optimized for indexing and searching embeddings, supporting fast approximate nearest neighbor queries used in semantic search and retrieval pipelines.
+- **Retrieval-Augmented Generation (RAG)**: An architecture where a model retrieves relevant external information (e.g., from a vector store or search index) and uses it as grounded context to generate more accurate, up-to-date, or source-based outputs.
+- **Fine-Tuning**: A training approach that updates a pre-trained model’s weights on task-specific data to improve performance, consistency, or domain adaptation beyond what prompting alone achieves.
+- **Inference**: The process of running a trained model to produce outputs from inputs (e.g., generating text from a prompt), typically involving decoding strategies like greedy, beam, or sampling methods.
+- **Agent**: A system that uses a model to plan and execute multi-step work toward a goal, often with memory, tools (APIs), and control logic to observe results, adapt, and iterate.
+- **Tool Use (Function Calling)**: A capability where a model selects and invokes external functions or APIs (search, database queries, code execution) to obtain information or take actions, then incorporates results into its response.
+- **Orchestration**: The coordination layer that manages multi-step AI workflows, including routing, tool selection, retries, state/memory management, safety checks, and integration with other services to deliver reliable outcomes.
+- **Reinforcement Learning (RL)**: A learning paradigm where an agent learns to choose actions by interacting with an environment to maximize cumulative reward over time.
+- **Reinforcement Learning from Human Feedback (RLHF)**: A technique that uses human preference judgments to train a reward model and then optimize a model’s behavior toward outputs humans rate as better aligned or higher quality.
+- **Supervised Learning**: A machine learning approach where a model learns a mapping from inputs to labeled outputs using example pairs (x, y), aiming to generalize to new inputs.
+- **Unsupervised Learning**: A machine learning approach where a model learns structure from unlabeled data, such as clusters, latent factors, or compressed representations.
+- **Self-Supervised Learning**: A training approach where labels are derived from the data itself (e.g., predicting masked or next tokens), enabling large-scale learning without manual annotation.
+- **Transfer Learning**: Reusing knowledge learned from one task or dataset to improve performance on another related task, often by starting from a pre-trained model.
+- **Multimodal Model**: A model that can process and/or generate multiple data types (such as text, images, audio, video), enabling cross-modal understanding and generation.
+- **Computer Vision**: The AI subfield focused on enabling machines to interpret and reason about images and video, including tasks like detection, segmentation, and recognition.
+- **Natural Language Processing (NLP)**: The AI subfield focused on analyzing, understanding, and generating human language, including tasks like parsing, classification, translation, and summarization.
+- **Speech Recognition (ASR)**: Automatic Speech Recognition: converting spoken audio into written text, typically using acoustic and language modeling techniques.
+- **Text-to-Speech (TTS)**: A system that converts text into spoken audio, often aiming for natural prosody, clarity, and speaker style control.
+- **Attention Mechanism**: A neural network component that dynamically weights the importance of different input parts when producing an output, enabling models to focus on the most relevant context.
+- **Transformer**: A neural network architecture built primarily around attention mechanisms, widely used in modern language and multimodal models for its scalability and performance.
+- **Training**: The process of optimizing model parameters using data and an objective function (loss), typically via gradient-based methods, to improve task performance.
+- **Loss Function**: A mathematical measure of error between model outputs and targets, used to guide training by indicating how parameters should be updated.
+- **Gradient Descent**: An optimization method that iteratively updates parameters in the direction that reduces the loss, often using variants like SGD, Adam, or AdamW.
+- **Overfitting**: A failure mode where a model learns patterns specific to training data (including noise) and performs poorly on new, unseen data.
+- **Generalization**: A model’s ability to perform well on unseen inputs by learning robust patterns rather than memorizing training examples.
+- **Hallucination**: A behavior where a generative model produces plausible-sounding but incorrect or unsupported content, often due to missing context, weak grounding, or ambiguous prompts.
+- **Alignment**: The set of methods and objectives used to steer model behavior toward human goals, safety constraints, and acceptable norms, reducing harmful or undesired outputs.

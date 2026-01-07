@@ -7,24 +7,25 @@ mode: "wide"
 
 ## What are AI Agent Tools?
 
+<Tip>
+  Key Principle: Tools turn the AI from a chatbot into an autonomous agent capable of performing actions and tasks with little to no supervision.
+</Tip>
+
 Think of an AI agent as a very capable assistant. On its own, it can think, reason, and talk. **Tools** are the things it can _use_ to actually get stuff done in the real world. These tools are callable functions or connectors that let an agent observe, retrieve information, or take actions via external systems (APIs, databases, services), extending its capabilities.
+
+> Tools extend what **agents** can do—letting them fetch real-time data, execute code, query external databases, and take actions in the world. 
+>
+> _Source: _[_LangChain Docs_](https://docs.langchain.com/oss/python/langchain/tools)
+
+Under the hood, tools are callable functions with well-defined inputs and outputs that get passed to an LLM. The model decides when to invoke a tool based on the conversation context, and what input arguments to provide.
 
 A helpful metaphor is a human at a desk. Your brain is great at planning, deciding, and explaining. But when you need to send an email, check a calendar, look up a file, or calculate a budget, you reach for tools. A keyboard, a browser, a calculator, a phone. Without them, you would be stuck thinking about work instead of doing it. AI agent tools work the same way.
 
-A tool is simply **a permissioned action the AI can take outside its own head**. Instead of just answering using generic knowledge, the agent can: 
-
-- Look something up
-- Send messages
-- Update records
-- Trigger workflows
-
-The key idea is this: **tools turn the AI from a chatbot into an autonomous "AI agent"**. Without tools, an AI can say, "Here’s how you should do this." With tools, it can say, "I’ve done it."
+A tool is simply **a permissioned action the AI can take outside its own head**. Without tools, an AI can say, "Here’s how you should do this." With tools, it can say, "I’ve done it."
 
 Importantly, tools are not magical or autonomous. They are tightly defined. Each tool says, in effect, “You may do this one specific thing.” The agent chooses whether to use a tool, when to use it, and how, but it cannot go beyond what the tool allows. That keeps things safe and predictable.
 
-Here is a concrete, everyday example.
-
-If you ask the Support Agent, “How do I get a parking pass?,” the thinking part figures out the intent. The tool is what the agent uses to find an answer, and provide the correct information. No  tool, no correct information, just general knowledge.
+Here is a concrete, everyday example. If you ask the Support Agent, “How do I get a parking pass?,” the thinking part figures out the intent. The tool is what the agent uses to find an answer, and provide the correct information. No tool, no correct information, just general knowledge.
 
 So when people talk about AI agents using tools, they are really talking about **bridging the gap between intelligence and action**. Tools are the bridge.
 
@@ -42,6 +43,8 @@ The BYUI Support Agent uses the tools defined in the table below:
 | **Campus Directory**       | Look up department phone numbers and locations                                                                                                                                                                                                         |
 | **Live Agent Handoff**     | Connect users to human support agents                                                                                                                                                                                                                  |
 | **Web Search**             | Search the web for general information                                                                                                                                                                                                                 |
+
+### Real-life Examples
 
 <AccordionGroup>
   <Accordion title="Knowledge Base" icon="book-key">

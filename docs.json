@@ -30,7 +30,8 @@
       },
       {
         "tab": "Learn",
-        "groups": [
+        "pages": [
+          "learn/glossary",
           {
             "group": "Basics of Artificial Intelligence",
             "pages": [
