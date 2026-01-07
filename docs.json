@@ -137,18 +137,7 @@
   "footer": {
     "socials": {
       "github": "https://github.com/BYUI-Information-Technology/"
-    },
-    "links": [
-      {
-        "header": "Brigham Young University–Idaho",
-        "items": [
-          {
-            "label": "Visit BYUI..edu",
-            "href": "https://www.byui.edu"
-          }
-        ]
-      }
-    ]
+    }
   },
   "feedback": {
     "thumbsRating": true,
