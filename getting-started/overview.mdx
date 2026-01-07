@@ -9,9 +9,9 @@ sidebarTitle: "Overview"
   This site natively integrates with your favorite AI tools like *ChatGPT*, *Claude*, *Perplexity*, or even *Cursor*. To use these features, simply click the **drop-down** menu from "**Copy Page**" on any page.
 </Card>
 
-The "**BYUI Support Agent**" or simply "**Support Agent**" is an advanced **multi-agent generative AI system** developed by AI engineers at BYU-Idaho to help students and employees of **Brigham Young University-Idaho** quickly find answers to common support questions. As of December 2025, the platform is accessible via the embedded [chat widget](/technical/chat-widget.mdx) on all byui.edu websites.
+The "**BYUI Support Agent**" or simply "**Support Agent**" is an advanced **agentic AI system** developed by AI engineers at BYU-Idaho to help the students and employees of **Brigham Young University-Idaho** quickly find answers to common support questions.
 
-This initiative represents a significant evolution from BYU-Idaho's previous FAQ chatbot, which was built on the Genesys Dialog Engine Bot Flows. The new Support Agent offers a more adaptive, intelligent, and scalable approach to student engagement—improving accuracy and accessibility while reducing the workload on Support Center staff.
+This platform is an evolution from the previous "chatbot", that it now replaces, that was built using scripted rules that were rigid and predefined. The new Support Agent offers a more adaptive, intelligent, scalable approach to user support—improving accuracy and accessibility while simultaneously reducing the workload on support personnel.
 
 <Check>
   Authentication is required in order to access the Support Agent platform.
@@ -19,65 +19,39 @@ This initiative represents a significant evolution from BYU-Idaho's previous FAQ
 
 ## Why We Built This
 
-The BYU-Idaho Support Center is tasked with supporting a larger student population with fewer staff. However, resource constraints limit the ability of staff to provide the level of support that is needed for the rising demand. The Support Agent addresses this challenge by providing:
+Central to the mission of the university is to serve, "...as *many students as possible* within *resource constraints*," while simultaneously..."delivering education that is *affordable* for students and the Church." The Support Agent uniquely follows the university's mission by providing:
+
+- Support that **scales instantly** as demand increases from forces such as increased enrollment or surges around campus deadlines (like finals or start-of-semester). AI unaffected by changes in volume or demand.
+- Information to users that is **accurate and tailored** to the needs of the BYUI students and staff that doesn't sacrifice **quality**.
+- Low-cost 
 
 - **After-Hours Support**: AI-assisted help available 24/7 for general university questions
 - **Reduced Staff Workload**: High-accuracy self-service reduces the load on first-level support agents
-- **Faster Response Times**: Students get instant answers without waiting in queue
-- **Personalized Support**: Context-aware responses tailored to each student's situation
+- **Faster Response Times**: Students and staff get instant answers without waiting in queue
+- **Personalized Support**: Context-aware responses tailored to each user's situation, knowing when it's conversing with an employee vs student
 - **Focus on Complex Issues**: Support Center staff can dedicate more time to complex student needs requiring human interaction
 
 ## How It Works
 
-Powered by [**OpenAI GPT-5.2**](https://openai.com/index/introducing-gpt-5-2/) and [retrieval augmented generation (RAG)](/learn/rag/what-is-rag) technology, the "Support Agent" is an AI agent that draws from a comprehensive knowledge base curated by the BYU-Idaho Support Center's staff to provide accurate, grounded responses based on official knowledge sources.
+Powered by the latest models from [**OpenAI**](https://openai.com/) and [retrieval augmented generation (RAG)](/learn/rag/what-is-rag) technology, the "Support Agent" is an AI agent that draws from a comprehensive knowledge base that's both curated and maintained by the BYU-Idaho Support Center's staff to provide accurate, grounded responses based on official, verified information.
 
-## What is an AI agent?
+**What the BYUI Support Agent can do:**
 
-The same LLM technology that powers ChatGPT can also serve as the foundation for an "Agent." Unlike a simple chatbot, an AI agent can **_reason about requests and take meaningful actions_** with a **_degree of autonomy_**. This is possible because agents can be **_connected to campus systems and tools_**—such as knowledge bases, academic calendars, student records, or service portals—and then use those resources to complete tasks.
-
-For example, an AI agent at BYU-Idaho could:
-
-- Look up an upcoming registration deadline on the academic calendar for a student.
-- Search academic policies and submit a ticket for a student with an unresolved concern.
-- Assist IT by triaging support requests before routing them to staff.
-
-These agents don't replace people—they extend the university's ability to serve. They operate under clear guardrails, working alongside faculty and staff to reduce repetitive workloads and provide students with faster, more consistent support.
-
-The BYUI Support Agent takes this concept further by using **multiple agents working together**. Instead of a single agent trying to do everything, specialized agents handle specific tasks (like searching the knowledge base, researching current policies, or deciding when to escalate to a human). This multi-agent approach provides more accurate, reliable, and contextually appropriate responses.
-
-## Agent Architecture
-
-Unlike traditional chatbots that follow rigid decision trees, the Support Agent uses a **multi-agent orchestration framework** where specialized AI agents collaborate autonomously to deliver accurate, compliant, and contextually aware responses.
-
-The Support Agent is built using the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/), which enables the creation of completely agentic systems for tasks ranging from simple question answering to complex multi-agent orchestration.
-
-### Current Agents:
-
-- **Gaurdrail Agent**: Dedicated to monitoring and safegaurding data privacy, reducing risk for harm, and blocking illegal, unethical, and harmful activity
-- **Support Agent**: Dedicated to frontline university support for both students and employees
-- **Research Agent**: Subagent that specializes in conducting research. This agent is currently configured to help students learn about AI tools that can help them in the future career fields
-
-The OpenAI Agents SDK allows us to build a future-proof, agentic system that can extend to additional departments, integrate with existing systems, automate and complete tasks, and serve as a platform for other AI agents.
-
-This modular design means our platform can be extended to support additional departments and integrate with more campus systems over time.
-
-## Advanced AI Technology
-
-- **OpenAI GPT-5.2**: Latest conversational AI technology for natural interactions from OpenAI
-- **Smart Search**: Uses Pinecone vector search to instantly find relevant information from the internal knowledge base
-- **Context Understanding**: Accurate understanding of content and context tailored to the needs of BYU-Idaho students and employees
-- **Multi-Agent RAG System**: Multiple specialized agents work together to handle knowledge retrieval, web research, and escalation decisions
+- **Reason through your question.** It analyzes what you actually need, even when your phrasing is conversational or imprecise. This is why you see the "Thinking..." indicator after your ask the agent a question.
+- **Search official knowledge sources.** It retrieves information directly from BYU-Idaho's policies, procedures, and support documentation—not from generic internet content or from it's own pre-training knowledge.
+- **Use tools to help you.** It can search for specific policies, look up procedures, and create support tickets when you need human assistance.
+- **Recognize its limits.** When a question requires human expertise or falls outside its capabilities, it seamlessly connects you with a live support specialist.
+- **Remember context.** It tracks the flow of your conversation, so you do not need to repeat yourself.
 
 ## Integrated with Campus Systems
 
 The Support Agent is connected to key campus systems to provide seamless support:
 
 - **Genesys Cloud**: For live agent escalation when human assistance is needed
-- **TeamDynamix**: For ticket creation and issue tracking
 - **Pinecone**: Enterprise-grade vector database for fast, accurate knowledge retrieval
 - **Microsoft**: Built on Microsoft's enterprise ecosystem for reliability, security, and scalability
 
-## Learn About the Tech
+## Learn More
 
 <Columns cols={2}>
   <Card title="OpenAI Agents SDK" icon="python" iconType="regular" color="#006EB6" href="https://platform.openai.com/docs/guides/agents-sdk" cta="Learn More">

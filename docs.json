@@ -35,6 +35,7 @@
             "group": "Basics of Artificial Intelligence",
             "pages": [
               "learn/basics/overview",
+              "learn/basics-of-artificial-intelligence/chatbot-vs-agent",
               "learn/basics/how-llms-are-trained",
               "learn/basics/what-is-model-alignment",
               "learn/basics/what-is-context-window",
