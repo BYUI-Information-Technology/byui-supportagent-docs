@@ -31,7 +31,6 @@
       {
         "tab": "Learn",
         "pages": [
-          "learn/glossary",
           {
             "group": "Basics of Artificial Intelligence",
             "pages": [
@@ -66,7 +65,8 @@
             "pages": [
               "learn/tips-tricks/why-markdown"
             ]
-          }
+          },
+          "learn/glossary"
         ]
       },
       {
