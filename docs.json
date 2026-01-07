@@ -136,7 +136,13 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/BYUI-Information-Technology/"
+      "github": "https://github.com/BYUI-Information-Technology/",
+      "facebook": "https://www.facebook.com/BYUID",
+      "instagram": "https://www.instagram.com/byuidaho/",
+      "youtube": "https://www.youtube.com/byui",
+      "x": "https://twitter.com/byuidaho",
+      "linkedin": "https://www.linkedin.com/company/byu-idaho",
+      "website": "https://www.byui.edu/"
     }
   },
   "feedback": {
