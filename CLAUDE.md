@@ -191,7 +191,6 @@ The `docs.json` file controls all navigation through a tab-based structure:
 **Support Contact Information** (standardized across docs):
 
 - Phone: [208-496-1411](tel:812084961411)
-- Email: <ask@byui.edu>
 - Hours: Monday-Friday 7:00 AM - 8:00 PM; Saturday 11:00 AM - 8:00 PM (Mountain Time)
 
 **Platform Details**:
