@@ -152,7 +152,7 @@
     "raiseIssue": true
   },
   "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp"]
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "cursor", "mcp"]
   },
   "thumbnails": {
     "appearance": "dark"
