@@ -13,4 +13,4 @@ templates/*
 # Exclude Agent Files
 .claude/*
 .claude
-CLAUDE.md
+*CLAUDE.md
