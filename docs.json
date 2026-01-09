@@ -35,7 +35,7 @@
             "group": "Basics of Artificial Intelligence",
             "pages": [
               "learn/basics/overview",
-              "learn/basics-of-artificial-intelligence/chatbot-vs-agent",
+              "learn/basics/chatbot-vs-agent",
               "learn/basics/how-llms-are-trained",
               "learn/basics/what-is-model-alignment",
               "learn/basics/what-is-context-window",
@@ -63,9 +63,7 @@
           },
           {
             "group": "Tips & Tricks",
-            "pages": [
-              "learn/tips-tricks/why-markdown"
-            ]
+            "pages": ["learn/tips-tricks/why-markdown"]
           },
           "learn/glossary"
         ]
@@ -76,7 +74,7 @@
           {
             "group": "Technical Documentation",
             "pages": [
-              "technical/technical-documentation/main-features",
+              "technical/main-features",
               "technical/chat-widget",
               "technical/agent-example",
               "technical/specifications"
@@ -89,9 +87,7 @@
         "groups": [
           {
             "group": "Releases",
-            "pages": [
-              "release-notes/release-notes"
-            ]
+            "pages": ["release-notes/release-notes"]
           }
         ]
       },
@@ -152,7 +148,15 @@
     "raiseIssue": true
   },
   "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "cursor", "mcp"]
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "cursor",
+      "mcp"
+    ]
   },
   "thumbnails": {
     "appearance": "dark"
