@@ -14,6 +14,105 @@ sidebarTitle: "Release Notes"
   | **Minor**        | v1.6 → v1.7     | New features, New integrations, Notable improvements                                                                                                                |
   | **Patch**        | v1.7.0 → v1.7.1 | Bug fixes, Security patches, Performance tweaks, Minor text/UI adjustments                                                                                          |
 </Accordion>
+<Update label="Jan 19, 2026" tags={["Features", "Improvements", "Performance tweaks", "Bug fixes"]}>
+## Version 1.4.0 - Minor Release
+## What's New
+
+This release introduces MCP (Model Context Protocol) server integration, replacing custom function tools with a centralized toolkit approach. The backend now connects to an n8n-hosted MCP server that provides knowledge tools including Knowledge Base Search, Academic Calendar, Portals and Resources, and Campus Directory. Performance improvements include priority routing for faster API response times.
+
+## Highlights
+
+- **MCP Server Integration**: Replaced 4 custom function tools with a unified MCP server toolkit
+- **Priority API Routing**: Added OpenAI priority service tier for faster response times
+- **Streaming Fix**: Resolved AttributeError in AgentUpdatedStreamEvent handling
+- **Code Reduction**: Removed ~400 lines of legacy tool code
+
+## Features
+
+**Backend - MCP Server Integration**
+
+- Integrate Support Agent Toolkit MCP server for knowledge tools (agent.py)
+- Add MCP server lifecycle management with proper connection handling (agent.py)
+- Bearer token authentication for secure MCP endpoint communication
+
+**Backend - Performance**
+
+- Add `service_tier="priority"` for faster API response times via OpenAI priority routing
+
+## Technical Changes
+
+**Tool Architecture Refactor**
+
+- Replace custom function tools with single MCP server integration
+- Migrate from direct Pinecone/Redis calls to centralized n8n MCP endpoint
+- Tools now use `mcp_servers` parameter in Agent constructor instead of `tools` parameter
+- Update system prompt to reference MCP server tools
+- Add `MCPServerStreamableHttp` import from `agents.mcp`
+
+## Bug Fixes
+
+**Streaming Event Handler**
+
+- Fix `AttributeError: 'AgentUpdatedStreamEvent' object has no attribute 'item'`
+- Ensure all `event.item.type` checks are properly nested inside `run_item_stream_event` block
+- Add clarifying comments to prevent future indentation issues
+
+</Update>
+
+<Update label="Jan 11, 2026" tags={["Features", "Improvements"]}>
+## Version 1.3.0 - Minor Release
+## What's New
+
+This release focuses on UI polish, consistency, and removing unnecessary dependencies. The Material UI library has been completely removed in favor of lighter shadcn/ui components and sonner toasts. New animations enhance the user experience during AI reasoning states.
+
+## Highlights
+
+- **Removed Material UI**: Replaced all MUI components with shadcn/ui equivalents, reducing bundle size by ~44 packages
+- **ShinyText Animation**: Added animated "Thinking..." text with star border glow effect during AI reasoning
+- **Dark Mode Consistency**: Toast notifications now match the dark theme background color
+- **UI Polish**: Fixed quick action card heights, chat input alignment, and avatar border rendering
+
+## Features
+
+**Frontend - New Components**
+
+- Add ShinyText component with animated shine effect for reasoning state (shiny-text.tsx)
+- Add StarBorder component for animated border effects (StarBorder.tsx, StarBorder.css)
+
+**Frontend - Toast Notifications**
+
+- Replace MUI Snackbar/Alert with sonner toast notifications (ChatMessage.tsx)
+- Add comprehensive dark mode styling for sonner toasts (index.css)
+- Reposition toast close button inside component (shadcn/ui style)
+
+## Improvements
+
+**Frontend - UI Consistency**
+
+- Fix quick action card heights to be uniform regardless of content length (Chat.tsx, StarBorder.css)
+- Fix chat input alignment to match quick action cards width (Chat.tsx)
+- Fix avatar border stretching by adding flex-shrink-0 (ChatMessage.tsx)
+- Add indeterminate progress animation for tool activity indicator (ToolActivityBar.tsx, index.css)
+
+**Backend - Agent Updates**
+
+- Update agent prompt and configuration (agent.py, prompt.py)
+
+## Technical Changes
+
+**Dependency Removal**
+
+- Remove @mui/material, @emotion/react, @emotion/styled dependencies
+- Remove MUI vendor chunk from Vite build configuration (vite.config.ts)
+- Add motion package for ShinyText animations
+- Update package-lock.json with reduced dependencies
+
+**Styling Updates**
+
+- Add CSS custom properties for sonner toast dark mode styling
+- Update StarBorder CSS to use flex display for proper height inheritance
+- Add progress-indeterminate keyframe animation
+</Update>
 
 <Update label="December 30, 2025" tags={["Features", "Improvements"]}>
 ## Version 1.2.0 - Minor Release
