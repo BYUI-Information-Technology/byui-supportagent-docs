@@ -8,7 +8,7 @@
     "light": "#006EB6",
     "dark": "#006EB6"
   },
-  "favicon": "/assets/favicon.svg",
+  "favicon": "/assets/favicon-byui.svg",
   "banner": {
     "content": "Announcement: The BYUI Support Agent is now live in production! 🚀",
     "dismissible": true
