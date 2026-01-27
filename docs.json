@@ -181,5 +181,8 @@
     "clarity": {
       "projectId": "v87hkp1zxn"
     }
+  },
+  "seo": {
+    "indexing": "navigable"
   }
 }
