@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Support Agent Documentation",
+  "name": "Support Agent Docs",
   "description": "Official documentation for BYU-Idaho's AI-powered Support Agent. Includes user guides, AI and RAG fundamentals, technical specifications, and resources for the OpenAI GPT-powered student support platform.",
   "colors": {
     "primary": "#006EB6",
@@ -116,11 +116,6 @@
         ]
       }
     ]
-  },
-  "logo": {
-    "light": "/assets/lightmode_logo_resized.png",
-    "dark": "/assets/darkmode_logo_resized.png",
-    "href": "https://www.byui.edu"
   },
   "appearance": {
     "default": "system",
