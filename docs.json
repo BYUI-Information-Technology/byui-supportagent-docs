@@ -165,7 +165,8 @@
     ]
   },
   "thumbnails": {
-    "appearance": "dark"
+    "appearance": "dark",
+    "background": "/assets/agent-logo.png"
   },
   "styling": {
     "eyebrows": "section"
@@ -175,5 +176,10 @@
   },
   "background": {
     "decoration": "windows"
+  },
+  "integrations": {
+    "clarity": {
+      "projectId": "v87hkp1zxn"
+    }
   }
 }
