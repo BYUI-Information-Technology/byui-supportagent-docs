@@ -63,7 +63,9 @@
           },
           {
             "group": "Tips & Tricks",
-            "pages": ["learn/tips-tricks/why-markdown"]
+            "pages": [
+              "learn/tips-tricks/why-markdown"
+            ]
           },
           "learn/glossary"
         ]
@@ -87,13 +89,22 @@
         "groups": [
           {
             "group": "Releases",
-            "pages": ["release-notes/release-notes"]
+            "pages": [
+              "release-notes/release-notes"
+            ]
           }
         ]
       },
       {
         "tab": "Resources",
         "groups": [
+          {
+            "group": "Referenced Resources",
+            "pages": [
+              "resources/referenced-resources/academic-catalog",
+              "resources/portals"
+            ]
+          },
           {
             "group": "Resources",
             "pages": [
