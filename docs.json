@@ -101,6 +101,7 @@
           {
             "group": "Referenced Resources",
             "pages": [
+              "resources/referenced-resources/claude-code",
               "resources/referenced-resources/academic-catalog",
               "resources/portals"
             ]

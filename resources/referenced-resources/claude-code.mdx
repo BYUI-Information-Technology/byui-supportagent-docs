@@ -1,0 +1,66 @@
+---
+title: "Claude Code"
+description: "Learn how to get started with Claude Code using your license provided by the BYU-Idaho IT department."
+---
+
+<Note>
+  **Prerequisite**: Must be a member of the IT organization at BYU-Idaho with an active license granted by the system admin for Claude (Ron Vallejo).
+</Note>
+
+## Quick Start
+
+Once you've accepted the email invite to join the BYU-Idaho IT org, you're ready to get started installing Claude Code on your machine. Just follow these steps!
+
+1. **Install Claude Code**
+
+   To install Claude Code, use one of the following methods:
+
+   <Tabs>
+     <Tab title="macOS, Linux">
+       **Native Install (recommended):**
+
+       ```bash
+       curl -fsSL https://claude.ai/install.sh | bash
+       ```
+
+       **Homebrew:**
+
+       ```bash
+       brew install --cask claude-code
+       ```
+     </Tab>
+     <Tab title="Windows">
+       **PowerShell:**
+
+       ```powershell
+       irm https://claude.ai/install.ps1 | iex
+       ```
+
+       **CMD:**
+
+       ```batch
+       curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+       ```
+     </Tab>
+   </Tabs>
+2. **Run Claude Code**
+
+   Navigate to the directory you wish on your device using the `cd` command and run Claude with the simple `claude` command.
+
+   ```bash
+   cd your-project
+   claude
+   ```
+3. **Configure Preferences**
+
+   You'll be prompted to configure your preferences on first use. Simply follow the on-screen prompts. Don't stress about the preferences, you can always dial them in and adjust them again later, especially as your preferences change (likely will).
+4. **Login**
+
+   Select the "**Anthropic Console account**" login method. You'll be redirected to the web to login and authorize your account. Make sure to select **Authorize**.
+
+## Ways to use Claude Code
+
+- **Build features from descriptions**: Tell Claude what you want to build in plain English. It will make a plan, write the code, and ensure it works.
+- **Debug and fix issues**: Describe a bug or paste an error message. Claude Code will analyze your codebase, identify the problem, and implement a fix.
+- **Navigate any codebase**: Ask anything about your team's codebase, and get a thoughtful answer back. Claude Code maintains awareness of your entire project structure, can find up-to-date information from the web, and with [MCP](/en/mcp) can pull from external data sources. 
+- **Automate tedious tasks**: Fix fiddly lint issues, resolve merge conflicts, and write release notes. Do all this in a single command from your developer machines, or automatically in CI.
