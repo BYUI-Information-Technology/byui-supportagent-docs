@@ -58,6 +58,34 @@ Once you've accepted the email invite to join the BYU-Idaho IT org, you're ready
 
    Select the "**Anthropic Console account**" login method. You'll be redirected to the web to login and authorize your account. Make sure to select **Authorize**.
 
+## Setup project "memory" (CLAUDE.md)
+
+Once you have installed, configured, and authenticated into Claude Code, you're ready to begin using Claude in your terminal. To be successful, you need to setup your project "memory". This is a simple Markdown document (`CLAUDE.md`) that sits in your project's root directory.
+
+To configure your CLAUDE.md document, simply have Claude help you! 
+
+Run:
+```bash
+/init
+```
+mkdir your-project
+
+ ❯ 1. Yes, I trust this folder
+
+For example:
+
+```txt
+your-project/
+├── apps/
+│    ├── backend/         # Python (of course)
+│    └── frontend/        # TypeScript
+├── release/              # Release notes (cause you should)
+└── CLAUDE.md             # Main project instructions
+
+```
+
+
+
 ## Ways to use Claude Code
 
 - **Build features from descriptions**: Tell Claude what you want to build in plain English. It will make a plan, write the code, and ensure it works.
