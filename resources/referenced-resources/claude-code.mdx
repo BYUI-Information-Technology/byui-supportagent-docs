@@ -4,133 +4,151 @@ description: "Learn how to get started with Claude Code using your license provi
 ---
 
 <Note>
-  **Prerequisite**: Must be a member of the IT organization at BYU-Idaho with an active license granted by the system admin for Claude (Ron Vallejo).
+  **Prerequisite**: Must be a member of the IT organization at BYU-Idaho with an
+  active license granted by the system admin for Claude (Ron Vallejo).
 </Note>
 
 ## Quick Start
 
 Once you've accepted the email invite to join the BYU-Idaho IT org, you're ready to get started installing Claude Code on your machine. Just follow these steps!
 
-1. **Install Node.js**
+<Warning>
+  **Windows users**: You must open PowerShell **as Administrator** to install Node.js and Git. Right-click the Start menu and select **Terminal (Admin)** or search for "PowerShell", right-click it, and choose **Run as administrator**.
 
-   Claude Code requires Node.js (version 18 or higher). Check if you already have it installed:
+  If you see an execution policy error like `running scripts is disabled on this system`, run this command first in your admin PowerShell:
 
-   ```bash
-   node --version
-   ```
+  ```powershell
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  ```
 
-   If you see a version number (e.g., `v22.x.x`), you're good to go. If not, install it:
+  Then retry the install command.
 
-   <Tabs>
-     <Tab title="macOS">
-       **Homebrew (recommended):**
+  After installing Node.js and Git, **close and reopen your terminal** so the updated PATH takes effect. If you skip this, commands like `node` and `git` won't be recognized.
+</Warning>
 
-       ```bash
-       brew install node
-       ```
+### 1. Install Node.js
 
-       If you don't have Homebrew, install it first by visiting [brew.sh](https://brew.sh).
-     </Tab>
-     <Tab title="Windows">
-       **winget:**
+Claude Code requires Node.js (version 18 or higher). Check if you already have it installed:
 
-       ```powershell
-       winget install OpenJS.NodeJS.LTS
-       ```
+```bash
+node --version
+```
 
-       Alternatively, download the installer from [nodejs.org](https://nodejs.org).
-     </Tab>
-   </Tabs>
+If you see a version number (e.g., `v22.x.x`), you're good to go. If not, install it:
 
-2. **Install Git**
+<Tabs>
+  <Tab title="macOS">
+    **Homebrew (recommended):**
 
-   Git is essential for version control and is used by Claude Code to track changes. Check if you already have it installed:
+    ```bash
+    brew install node
+    ```
 
-   ```bash
-   git --version
-   ```
+    If you don't have Homebrew, install it first by visiting [brew.sh](https://brew.sh).
+  </Tab>
+  <Tab title="Windows">
+    **winget:**
 
-   If you see a version number, you're set. If not, install it:
+    ```powershell
+    winget install OpenJS.NodeJS.LTS
+    ```
 
-   <Tabs>
-     <Tab title="macOS">
-       ```bash
-       xcode-select --install
-       ```
+    Alternatively, download the installer from [nodejs.org](https://nodejs.org).
+  </Tab>
+</Tabs>
 
-       This installs Git along with other developer tools. Follow the on-screen prompts to complete the installation.
-     </Tab>
-     <Tab title="Windows">
-       **winget:**
+### 2. Install Git
 
-       ```powershell
-       winget install Git.Git
-       ```
+Git is essential for version control and is used by Claude Code to track changes. Check if you already have it installed:
 
-       Alternatively, download the installer from [git-scm.com](https://git-scm.com). During installation, the default settings are fine.
-     </Tab>
-   </Tabs>
+```bash
+git --version
+```
 
-3. **Install Claude Code**
+If you see a version number, you're set. If not, install it:
 
-   To install Claude Code, use one of the following methods:
+<Tabs>
+  <Tab title="macOS">
+    ```bash
+    xcode-select --install
+    ```
 
-   <Tabs>
-     <Tab title="macOS">
-       **Native Install (recommended):**
+    This installs Git along with other developer tools. Follow the on-screen prompts to complete the installation.
+  </Tab>
+  <Tab title="Windows">
+    **winget:**
 
-       ```bash
-       curl -fsSL https://claude.ai/install.sh | bash
-       ```
+    ```powershell
+    winget install Git.Git
+    ```
 
-       **Homebrew:**
+    Alternatively, download the installer from [git-scm.com](https://git-scm.com). During installation, the default settings are fine.
+  </Tab>
+</Tabs>
 
-       ```bash
-       brew install --cask claude-code
-       ```
-     </Tab>
-     <Tab title="Windows">
-       **PowerShell:**
+### 3. Install Claude Code
 
-       ```powershell
-       irm https://claude.ai/install.ps1 | iex
-       ```
+<Tabs>
+  <Tab title="macOS">
+    **Native Install (recommended):**
 
-       **CMD:**
+    ```bash
+    curl -fsSL https://claude.ai/install.sh | bash
+    ```
 
-       ```batch
-       curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
-       ```
-     </Tab>
-   </Tabs>
-4. **Run Claude Code**
+    **Homebrew:**
 
-   Navigate to the directory you wish on your device using the `cd` command and run Claude with the simple `claude` command.
+    ```bash
+    brew install --cask claude-code
+    ```
+  </Tab>
+  <Tab title="Windows">
+    **PowerShell:**
 
-   ```bash
-   cd your-project
-   claude
-   ```
-5. **Configure Preferences**
+    ```powershell
+    irm https://claude.ai/install.ps1 | iex
+    ```
 
-   You'll be prompted to configure your preferences on first use. Simply follow the on-screen prompts. Don't stress about the preferences, you can always dial them in and adjust them again later, especially as your preferences change (likely will).
-6. **Login**
+    **CMD:**
 
-   Select the "**Anthropic Console account**" login method. You'll be redirected to the web to login and authorize your account. Make sure to select **Authorize**.
+    ```batch
+    curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+    ```
+  </Tab>
+</Tabs>
+
+### 4. Run Claude Code
+
+Navigate to the directory you wish on your device using the `cd` command and run Claude with the simple `claude` command.
+
+```bash
+cd your-project
+claude
+```
+
+### 5. Configure Preferences
+
+You'll be prompted to configure your preferences on first use. Simply follow the on-screen prompts. Don't stress about the preferences, you can always dial them in and adjust them again later, especially as your preferences change (likely will).
+
+### 6. Login
+
+Select the "**Anthropic Console account**" login method. You'll be redirected to the web to login and authorize your account. Make sure to select **Authorize**.
 
 ## Setup project "memory" (CLAUDE.md)
 
 Once you have installed, configured, and authenticated into Claude Code, you're ready to begin using Claude in your terminal. To be successful, you need to setup your project "memory". This is a simple Markdown document (`CLAUDE.md`) that sits in your project's root directory.
 
-To configure your CLAUDE.md document, simply have Claude help you! 
+To configure your CLAUDE.md document, simply have Claude help you!
 
 Run:
+
 ```bash
 /init
 ```
+
 mkdir your-project
 
- ❯ 1. Yes, I trust this folder
+❯ 1. Yes, I trust this folder
 
 For example:
 
@@ -144,11 +162,9 @@ your-project/
 
 ```
 
-
-
 ## Ways to use Claude Code
 
 - **Build features from descriptions**: Tell Claude what you want to build in plain English. It will make a plan, write the code, and ensure it works.
 - **Debug and fix issues**: Describe a bug or paste an error message. Claude Code will analyze your codebase, identify the problem, and implement a fix.
-- **Navigate any codebase**: Ask anything about your team's codebase, and get a thoughtful answer back. Claude Code maintains awareness of your entire project structure, can find up-to-date information from the web, and with [MCP](/en/mcp) can pull from external data sources. 
+- **Navigate any codebase**: Ask anything about your team's codebase, and get a thoughtful answer back. Claude Code maintains awareness of your entire project structure, can find up-to-date information from the web, and with [MCP](/en/mcp) can pull from external data sources.
 - **Automate tedious tasks**: Fix fiddly lint issues, resolve merge conflicts, and write release notes. Do all this in a single command from your developer machines, or automatically in CI.
