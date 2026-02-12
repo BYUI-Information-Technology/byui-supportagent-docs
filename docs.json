@@ -173,7 +173,7 @@
   },
   "thumbnails": {
     "appearance": "dark",
-    "background": "/assets/favicon-byui.svg"
+    "background": "/assets/agent-large.png"
   },
   "styling": {
     "eyebrows": "section"
@@ -182,7 +182,7 @@
     "library": "lucide"
   },
   "background": {
-    "decoration": "windows"
+    "decoration": "gradient"
   },
   "integrations": {
     "clarity": {
